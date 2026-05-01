@@ -3,51 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hướng dẫn mua đề</title>
+<title>Hướng dẫn tải đề</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
 body{
-  font-family:Arial;
-  background:#f4f6f9;
-  padding:20px;
+    background:linear-gradient(135deg,#f8fbff,#eef4ff);
+    padding:20px;
+    color:#333;
 }
 
 .container{
-  max-width:800px;
-  margin:auto;
+    max-width:850px;
+    margin:auto;
 }
 
 .card{
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  margin-bottom:20px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    margin-bottom:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
 h2{
-  margin-bottom:10px;
+    margin-bottom:15px;
+    font-size:28px;
+    color:#1e293b;
+}
+
+.intro{
+    background:#fff7ed;
+    padding:15px;
+    border-radius:12px;
+    color:#ea580c;
+    font-weight:500;
+    line-height:1.6;
 }
 
 .step{
-  margin:10px 0;
-  padding:10px;
-  background:#e9f2ff;
-  border-radius:8px;
+    margin:12px 0;
+    padding:14px;
+    background:#f1f7ff;
+    border-left:5px solid #3b82f6;
+    border-radius:10px;
+    font-weight:normal;
+    line-height:1.5;
 }
 
 .warning{
-  background:#ffecec;
-  padding:10px;
-  border-radius:8px;
-  color:#c0392b;
+    background:#fff1f2;
+    padding:16px;
+    border-left:5px solid #ef4444;
+    border-radius:10px;
+    color:#b91c1c;
+    line-height:1.8;
 }
 
 .support{
-  background:#eaffea;
-  padding:10px;
-  border-radius:8px;
-  font-weight: normal;
+    background:#f0fdf4;
+    padding:16px;
+    border-left:5px solid #22c55e;
+    border-radius:10px;
+    line-height:1.8;
+}
+
+.note{
+    margin-top:15px;
+    font-weight:bold;
+    color:#2563eb;
 }
 </style>
 </head>
@@ -56,48 +86,59 @@ h2{
 
 <div class="container">
 
-<div class="card">
-  <h2>📘 Hướng dẫn mua đề</h2>
+    <!-- Hướng dẫn -->
+    <div class="card">
+        <h2>📘 Hướng dẫn tải đề</h2>
 
-  <h4 style="color:rgb(248, 119, 39)">💙 Web được duy trì để chia sẻ đề ôn tập cho mọi người. Nếu bạn thấy hữu ích, có thể ủng hộ mình một ly nước (4–5k) bằng cách mua đề để mình có động lực đăng thêm nhiều đề hơn nhé!</h4>
+        <div class="intro">
+            💙 Web được duy trì để chia sẻ đề ôn tập cho mọi người.  
+            Nếu bạn thấy hữu ích, có thể ủng hộ mình một ly nước (4–5k) 
+            để mình có động lực đăng thêm nhiều đề hơn nha ✨
+        </div>
 
-  <div class="step">👉 Bước 1: Bấm nút <b>Mua đề</b></div>
-  <div class="step">👉 Bước 2: Quét mã QR bằng app ngân hàng hoặc ví điện tử</div>
-  <div class="step">👉 Bước 3: Chuyển khoản đúng nội dung</div>
-  <div class="step">👉 Bước 4: Nhập mã để tải đề (mã là nội dung đã chuyển khoản)</div>
+        <div class="step">👉 Bước 1: Bấm nút <b>Tải đề</b></div>
+        <div class="step">👉 Bước 2: Quét mã QR bằng app ngân hàng hoặc ví điện tử</div>
+        <div class="step">👉 Bước 3: Chuyển khoản đúng nội dung</div>
+        <div class="step">👉 Bước 4: Nhập mã để tải đề (mã = nội dung chuyển khoản)</div>
 
-  <p>⏱️ Sau khi chuyển khoản ~3 giây hệ thống sẽ mở đề</p>
-</div>
+        <div class="note">
+            ⏱️ Sau khi chuyển khoản khoảng 3 giây hệ thống sẽ tự mở đề
+        </div>
+    </div>
 
-<div class="card">
-  <h2>⚠️ Lưu ý quan trọng</h2>
+    <!-- Lưu ý -->
+    <div class="card">
+        <h2>⚠️ Lưu ý quan trọng</h2>
 
-  <div class="warning">
-    ❗ Phải chuyển khoản và nhập đúng nội dung chuyển khoản<br>
-    ❗ Không sửa mã<br>
-    ❗ Mỗi mã chỉ dùng 1 lần<br>
-    ❗ Mỗi mã chỉ có <b>15 phút sử dụng<b>
-  </div>
-</div>
+        <div class="warning">
+            ❗ Phải chuyển khoản và nhập đúng nội dung chuyển khoản<br>
+            ❗ Không chỉnh sửa mã<br>
+            ❗ Mỗi mã chỉ dùng 1 lần<br>
+            ❗ Mỗi mã chỉ có <b>15 phút sử dụng</b>
+        </div>
+    </div>
 
-<div class="card">
-  <h2>📱 Hướng dẫn quét QR</h2>
+    <!-- QR -->
+    <div class="card">
+        <h2>📱 Hướng dẫn quét QR</h2>
 
-  <div class="step">✔ Mở app ngân hàng hoặc ví điện tử (MB, BIDV, Vietcombank, ZaloPay, Momo,...)</div>
-  <div class="step">✔ Chọn chức năng Quét QR</div>
-  <div class="step">❌ Không dùng camera thường</div>
-</div>
+        <div class="step">✔ Mở app ngân hàng hoặc ví điện tử (MB, BIDV, Vietcombank, ZaloPay, Momo...)</div>
+        <div class="step">✔ Chọn chức năng Quét QR</div>
+        <div class="step">❌ Không dùng camera thường</div>
+    </div>
 
-<div class="card">
-  <h2>📞 Hỗ trợ</h2>
+    <!-- Hỗ trợ -->
+    <div class="card">
+        <h2>📞 Hỗ trợ</h2>
 
-  <div class="support">
-    Nếu đã chuyển khoản nhưng chưa nhận được đề:<br>
-    👉 Liên hệ Zalo: 0388411493<br>
-    👉Liên hệ Email: chaulht18.tvu@gmail.com<br>
-    👉 Gửi ảnh chuyển khoản và đang gặp lỗi để được hỗ trợ nhanh nhất.
-  </div>
-</div>
+        <div class="support">
+            Nếu đã chuyển khoản nhưng chưa nhận được đề:<br><br>
+
+            👉 Zalo: <b>0388411493</b><br>
+            👉 Email: <b>chaulht18.tvu@gmail.com</b><br>
+            👉 Gửi ảnh chuyển khoản nếu gặp lỗi để được hỗ trợ nhanh nhất.
+        </div>
+    </div>
 
 </div>
 
