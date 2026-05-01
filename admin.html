@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Admin thêm đề</title>
+
+<style>
+body{
+  font-family:Arial;
+  background:#f4f6f9;
+  padding:20px;
+}
+
+input, select{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+}
+
+button{
+  padding:10px 20px;
+  background:#2c7be5;
+  color:white;
+  border:none;
+  border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<h2>Thêm đề mới</h2>
+
+<input id="title" placeholder="Tên sở/trường">
+
+<select id="subject">
+  <option value="Toán">Toán</option>
+  <option value="Ngữ Văn">Ngữ Văn</option>
+  <option value="Tiếng Anh">Tiếng Anh</option>
+  <option value="Lịch Sử">Lịch Sử</option>
+  <option value="Địa Lý">Địa Lý</option>
+  <option value="Vật Lí">Vật Lí</option>
+</select>
+
+<input id="mon" placeholder="data-mon (toan/van/anh/su/dia/li)">
+<input id="id" placeholder="ID đề (vd: toan99)">
+<input id="link" placeholder="Link Google Drive">
+
+<button onclick="addExam()">Thêm đề</button>
+
+<script>
+function addExam(){
+
+  const title = document.getElementById("title").value;
+  const subject = document.getElementById("subject").value;
+  const mon = document.getElementById("mon").value;
+  const id = document.getElementById("id").value;
+  const link = document.getElementById("link").value;
+
+  let data = JSON.parse(localStorage.getItem("adminExams") || "[]");
+
+  data.push({
+    title,
+    subject,
+    mon,
+    id,
+    link
+  });
+
+  localStorage.setItem("adminExams", JSON.stringify(data));
+
+  alert("Thêm đề thành công!");
+}
+</script>
+
+</body>
+</html>
