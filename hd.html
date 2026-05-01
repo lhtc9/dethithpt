@@ -141,6 +141,17 @@ h2{
     </div>
 
 </div>
+<script>
+    const isDev = false; // true test, false publish
 
+if (!isDev) {
+  document.addEventListener("contextmenu", e => e.preventDefault());
+
+  document.onkeydown = function(e) {
+    if (e.key === "F12") return false;
+    if (e.ctrlKey && e.key.toLowerCase() === "u") return false;
+    if (e.ctrlKey && e.shiftKey && e.key === "I") return false;
+  };
+    </script>
 </body>
 </html>
