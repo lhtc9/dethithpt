@@ -336,7 +336,10 @@ nav a{
  <input type="text" id="searchInput" placeholder="Tìm đề các tỉnh... (VD: Vĩnh Long or Toán)">
 </div>
 
+<!--Nội dung đề-->
+<div id="adminExams"></div>
 <div class="exam-list">
+
 
 <!--Mon Toan-->
 
@@ -859,7 +862,44 @@ if (!isDev) {
 
 // ===== BÁN ĐỀ =====
 
-const links = {
+//Them de = admin-->
+
+function loadAdminExams(){
+  const data = JSON.parse(localStorage.getItem("adminExams") || "[]");
+
+  const box = document.getElementById("adminExams");
+
+  data.forEach(exam => {
+
+    // thêm card mới
+    const card = document.createElement("div");
+    card.className = "exam";
+    card.setAttribute("data-mon", exam.mon);
+
+    card.innerHTML = `
+      <h4>${exam.title}</h4>
+      <p>Môn: ${exam.subject}</p>
+      
+      <div class="buy-box">
+        <a href="#" onclick="buyExam('${exam.id}'); return false;">Tải đề</a>
+        <span class="price">4K</span>
+      </div>
+    `;
+
+    box.appendChild(card);
+
+    // tự thêm link vào hệ thống
+    links[exam.id] = exam.link;
+  });
+}
+
+window.onload = function(){
+  loadAdminExams();
+}
+
+//end admin
+
+let links = {
   toan1: "https://drive.google.com/file/d/1aNzGj0LhF_b3tB8FQJLkdo-_ohYkp_yC/view?usp=sharing",
   toan2: "",
   toan3: "https://drive.google.com/file/d/13e-bxjCa6IIQOeNbxFxJ0WmwHb2ujWwf/view?usp=sharing",
