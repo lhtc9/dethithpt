@@ -619,10 +619,68 @@ nav a{
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     border: 1px solid #dce8ff;
 }
+  .ai-bg{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+/* orb xanh chính */
+.ai-bg::before{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:rgba(44,123,229,0.45); 
+    border-radius:50%;
+    filter:blur(110px);
+    top:15%;
+    left:8%;
+    animation: floatAI1 8s infinite alternate ease-in-out;
+}
+
+/* orb xanh ngọc */
+.ai-bg::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(0,255,200,0.35);
+    border-radius:50%;
+    filter:blur(100px);
+    bottom:10%;
+    right:8%;
+    animation: floatAI2 10s infinite alternate ease-in-out;
+}
+
+@keyframes floatAI1{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(180px,100px);
+    }
+}
+
+@keyframes floatAI2{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(-150px,-80px);
+    }
+}
 </style>
 </head>
 
 <body>
+
+  <div class="ai-bg"></div>
 
 <!-- Popup ghi chú khi vào web -->
 <div id="welcomePopup">
