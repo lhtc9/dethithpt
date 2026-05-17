@@ -146,13 +146,63 @@ nav a{
   background:#1a5edb;
   transform:translateY(-2px);
 }
+
+.exam{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+}
+
+.exam-icon{
+  width:50px;
+  height:50px;
+  min-width:50px;
+  background:#eef4ff;
+  border-radius:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
+}
+
+.exam-content{
+  flex:1;
+}
 /* ===== SEARCH ===== */
-.search input{
-  width:100%;
-  padding:10px;
-  border-radius:8px;
-  border:1px solid #ccc;
-  margin-bottom:20px;
+.search-box{
+  max-width: 700px;
+  margin: 20px auto;
+  display: flex;
+  background: white;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.search-box input{
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.search-box button{
+  width: 60px;
+  border: none;
+  background: #2c7be5;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover{
+  background: #1a5edb;
 }
 
 /* ===== GRID ===== */
@@ -371,6 +421,52 @@ nav a{
     transform: scale(1);
   }
 }
+/* ===== MENU MÔN HỌC ===== */
+.subject-menu{
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.subject-menu button{
+  border: none;
+  background: #f1f5ff;
+  color: #2c7be5;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subject-menu button:hover{
+  background: #2c7be5;
+  color: white;
+}
+
+.subject-menu button.active{
+  background: #2c7be5;
+  color: white;
+}
+
+/* mobile */
+@media(max-width:768px){
+  .subject-menu{
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 10px;
+  }
+
+  .subject-menu button{
+    white-space: nowrap;
+  }
+}
 </style>
 </head>
 
@@ -407,12 +503,36 @@ nav a{
 
   <div class="banner">
 </div>
-
+<!-- MENU LỌC MÔN -->
+<div class="subject-menu">
+  <button onclick="filterSubject('all')" class="active">Tất cả</button>
+  <button onclick="window.location.href='dungsai.html'">Đúng/Sai</button>
+  <button onclick="filterSubject('toan')">Toán</button>
+  <button onclick="filterSubject('van')">Văn</button>
+  <button onclick="filterSubject('anh')">Anh</button>
+  <button onclick="filterSubject('li')">Lý</button>
+  <button onclick="filterSubject('su')">Sử</button>
+  <button onclick="filterSubject('dia')">Địa</button>
+  <!-- Chưa có đề -->
+  <button onclick="comingSoon()">Hóa</button>
+  <button onclick="comingSoon()">Sinh</button>
+  <button onclick="comingSoon()">Tin học</button>
+  <button onclick="comingSoon()">Công nghệ</button>
+  <button onclick="comingSoon()">GDKTPL</button>
+</div>
 <div class="container">
 <main>
 
-<div class="search">
- <input type="text" id="searchInput" placeholder="Tìm đề các tỉnh... (VD: Vĩnh Long hoặc Sử)">
+<div class="search-box">
+    <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Tìm đề các tỉnh... (VD: Sử Vĩnh Long)"
+    >
+
+    <button onclick="applyFilter()">
+        🔍
+    </button>
 </div>
 
 <!--Nội dung đề-->
@@ -875,22 +995,38 @@ let currentFilter = "all";
 
 /* FILTER + SEARCH */
 function applyFilter(){
-  const keyword = document.getElementById("searchInput").value.toLowerCase();
+  const keyword = document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
   const exams = document.querySelectorAll(".exam");
+
+  // tách từng từ
+  const keywords = keyword.split(" ");
 
   exams.forEach(exam => {
     const mon = exam.getAttribute("data-mon");
     const text = exam.innerText.toLowerCase();
 
-    const matchMon = (currentFilter === "all" || mon === currentFilter);
-    const matchSearch = text.includes(keyword);
+    const matchMon = (
+      currentFilter === "all" || 
+      mon === currentFilter
+    );
 
-    exam.style.display = (matchMon && matchSearch) ? "block" : "none";
+    // tất cả từ đều phải tồn tại
+    const matchSearch = keywords.every(word => 
+      text.includes(word)
+    );
+
+    exam.style.display = (matchMon && matchSearch)
+      ? "block"
+      : "none";
   });
 }
 
 /* SEARCH */
-document.getElementById("searchInput").addEventListener("input", applyFilter);
 
 /* ĐỌC URL */
 const params = new URLSearchParams(window.location.search);
@@ -938,6 +1074,47 @@ if (!isDev) {
   };
 }
 
+function filterSubject(subject){
+  currentFilter = subject;
+
+  // đổi active button
+  document.querySelectorAll(".subject-menu button").forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  event.target.classList.add("active");
+
+  applyFilter();
+}
+
+//===NHẤN ENTER ĐỂ TÌM ĐỀ===///
+document.getElementById("searchInput").addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    applyFilter();
+  }
+});
+
+function comingSoon(){
+  alert("Môn này đang cập nhật đề, quay lại sau nhé!");
+}
+
+//===icon đề==//
+document.querySelectorAll(".exam").forEach(exam => {
+    const mon = exam.getAttribute("data-mon");
+
+    let icon = "📄"; // mặc định
+
+    if(mon === "dungsai"){
+        icon = "✔️";
+    }
+
+    exam.innerHTML = `
+        <div class="exam-icon">${icon}</div>
+        <div class="exam-content">
+            ${exam.innerHTML}
+        </div>
+    `;
+});
 // ===== BÁN ĐỀ =====
 
 const links = {
@@ -1106,6 +1283,7 @@ setTimeout(() => {
 function closeWelcomePopup(){
   document.getElementById("welcomePopup").style.display = "none";
 }
+
   
 </script>
 <!-- ===== POPUP THANH TOÁN ===== -->
