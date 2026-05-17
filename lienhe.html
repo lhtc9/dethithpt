@@ -230,6 +230,18 @@ h2{
     display:block;
   }
 }
+
+.visit-counter{
+    width: fit-content;
+    margin: 30px auto 20px auto;
+    padding: 12px 25px;
+    background: white;
+    color: #2c7be5;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid #dce8ff;
+}
 </style>
 </head>
 <body>
@@ -264,7 +276,9 @@ h2{
       <p>Email: chaulht18.tvu@gmail.com</p>
     </div>
   </div>
-
+<div class="visit-counter">
+    Hôm nay có <span id="visitCount">0</span> lượt truy cập
+</div>
   <footer class="footer">
   <div class="footer-container">
 
@@ -356,6 +370,24 @@ if (!isDev) {
     if (e.ctrlKey && e.shiftKey && e.key === "I") return false;
   };
 }
+    //===luot truy cao==//
+function fakeVisitCounter(){
+    let current = localStorage.getItem("fakeVisits");
+
+    if(!current){
+        current = 1287;
+    }else{
+        current = parseInt(current);
+    }
+
+    current += Math.floor(Math.random()*5)+1;
+
+    localStorage.setItem("fakeVisits", current);
+
+    document.getElementById("visitCount").innerText = current;
+}
+
+fakeVisitCounter();
 </script>
 </body>
 </html>
