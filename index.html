@@ -251,7 +251,7 @@ nav a{
   background: #2c7be5; /* cùng màu header */
   color: white;
   padding-top: 40px;
-  border-top: 3px solid #1a5edb;
+  
 }
 
 .footer-container {
@@ -461,11 +461,163 @@ nav a{
     overflow-x: auto;
     flex-wrap: nowrap;
     padding: 10px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE */
+  }
+
+  .subject-menu::-webkit-scrollbar{
+    display: none; /* Chrome, Safari */
   }
 
   .subject-menu button{
     white-space: nowrap;
   }
+}
+
+.popup-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:15px;
+}
+
+.confirm-btn{
+  background:#2c7be5;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.confirm-btn:hover{
+  background:#1a5edb;
+  transform:translateY(-2px);
+}
+
+.close-btn{
+  background:#ff4d4f;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.close-btn:hover{
+  background:#d9363e;
+  transform:translateY(-2px);
+}
+
+.truefalse-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:40px 0 20px;
+  font-size:28px;
+  font-weight:bold;
+  color:#ff7a00;
+}
+
+.truefalse-title::after{
+  content:"";
+  flex:1;
+  height:2px;
+  background:#ffb26b;
+}
+
+.dungsai-card .exam-icon{
+  background:#fff3e6;
+}
+
+.dungsai-card a{
+  background:#ff7a00;
+}
+
+.dungsai-card a:hover{
+  background:#e66a00;
+}
+
+.full-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:40px 0 20px;
+  font-size:28px;
+  font-weight:bold;
+  color:#2c7be5;
+}
+
+.full-title::after{
+  content:"";
+  flex:1;
+  height:2px;
+  background:#8bb8ff;
+}
+.full-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:40px 0 20px;
+  font-size:28px;
+  font-weight:bold;
+  color:#2c7be5;
+}
+
+.full-title::after{
+  content:"";
+  flex:1;
+  height:2px;
+  background:#8bb8ff;
+}
+
+/*xem thêm*/
+.load-more-wrap{
+    text-align:center;
+    margin:30px 0;
+}
+
+#loadMoreBtn,
+#loadMoreTrueFalseBtn{
+    background:white;
+    color:#2c7be5;
+    border:1px solid #dcdcdc;
+    padding:12px 30px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+#loadMoreBtn:hover,
+#loadMoreTrueFalseBtn:hover{
+    background:#ff7a00;
+    color:white;
+}#loadMoreTrueFalseBtn{
+    background:white;
+    color:#ff7a00;
+    border:1px solid #ffb26b;
+}
+
+#loadMoreTrueFalseBtn:hover{
+    background:#ff7a00;
+    color:white;
+}
+
+.visit-counter{
+    width: fit-content;
+    margin: 30px auto 20px auto;
+    padding: 12px 25px;
+    background: white;
+    color: #2c7be5;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid #dce8ff;
 }
 </style>
 </head>
@@ -506,7 +658,7 @@ nav a{
 <!-- MENU LỌC MÔN -->
 <div class="subject-menu">
   <button onclick="filterSubject('all')" class="active">Tất cả</button>
-  <button onclick="window.location.href='dungsai.html'">Đúng/Sai</button>
+  <button onclick="window.location.href='index.html'">Đúng/Sai</button>
   <button onclick="filterSubject('toan')">Toán</button>
   <button onclick="filterSubject('van')">Văn</button>
   <button onclick="filterSubject('anh')">Anh</button>
@@ -535,7 +687,9 @@ nav a{
     </button>
 </div>
 
-<!--Nội dung đề-->
+<!--Nội dung đề thường-->
+<h2 class="full-title">📘 ĐỀ CÁC SỞ</h2>
+
 <div class="exam-list">
 
 
@@ -959,8 +1113,94 @@ nav a{
   <a href="#" onclick="buyExam('anh9'); return false;">Tải đề</a>
 </div>
 </div>
+
+<div class="load-more-wrap">
+    <button id="loadMoreBtn">Xem thêm</button>
+</div>
+
+
+<!-- PHẦN ĐỀ ĐÚNG / SAI -->
+<h2 class="truefalse-title">📝 ĐỀ ĐÚNG / SAI</h2>
+
+<div class="exam-list truefalse-list">
+
+  <div class="exam dungsai-card" data-mon="dungsai">
+    <p>Môn: Toán</p>
+    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
+      Tải đề
+    </a>
+  </div>
+
+  <div class="exam dungsai-card" data-mon="dungsai">
+    <p>Môn: Toán</p>
+    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
+      Tải đề
+    </a>
+  </div>
+
+  <div class="exam dungsai-card" data-mon="dungsai">
+    <p>Môn: Sử</p>
+    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
+      Tải đề
+    </a>
+  </div>
+
+  <div class="exam dungsai-card" data-mon="dungsai">
+    <p>Môn: Sử</p>
+    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
+      Tải đề
+    </a>
+  </div>
+
+  <div class="exam dungsai-card" data-mon="dungsai">
+    <p>Môn: Địa</p>
+    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
+      Tải đề
+    </a>
+  </div>
+
+  <div class="exam dungsai-card" data-mon="dungsai">
+    <p>Môn: Địa</p>
+    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
+      Tải đề
+    </a>
+  </div>
+
+  <div class="exam dungsai-card" data-mon="dungsai">
+    <p>Môn: Lý</p>
+    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
+      Tải đề
+    </a>
+  </div>
+
+  <div class="exam dungsai-card" data-mon="dungsai">
+    <p>Môn: Lý</p>
+    <a href="#" onclick="comingSoonTrueFalse('ds2'); return false;">
+      Tải đề
+    </a>
+  </div>
+
+  <div class="exam dungsai-card" data-mon="dungsai">
+    <p>Môn: Hóa</p>
+    <a href="#" onclick="comingSoonTrueFalse('ds3'); return false;">
+      Tải đề
+    </a>
+  </div>
+
+</div>
+<div class="load-more-wrap">
+    <button id="loadMoreTrueFalseBtn">
+        Xem thêm
+    </button>
+</div>
 </main>
 </div>
+
+<div class="visit-counter">
+    Hôm nay có <span id="visitCount">0</span> lượt truy cập
+</div>
+
+<footer class="footer">
 
 <footer class="footer">
   <div class="footer-container">
@@ -1001,7 +1241,7 @@ function applyFilter(){
     .toLowerCase()
     .trim();
 
-  const exams = document.querySelectorAll(".exam");
+  const exams = document.querySelectorAll(".exam-list:not(.truefalse-list) .exam");
 
   // tách từng từ
   const keywords = keyword.split(" ");
@@ -1077,6 +1317,9 @@ if (!isDev) {
 function filterSubject(subject){
   currentFilter = subject;
 
+  // reset ô tìm kiếm
+  document.getElementById("searchInput").value = "";
+
   // đổi active button
   document.querySelectorAll(".subject-menu button").forEach(btn=>{
     btn.classList.remove("active");
@@ -1087,17 +1330,12 @@ function filterSubject(subject){
   applyFilter();
 }
 
-//===NHẤN ENTER ĐỂ TÌM ĐỀ===///
-document.getElementById("searchInput").addEventListener("keypress", function(e){
-  if(e.key === "Enter"){
-    applyFilter();
-  }
-});
-
 function comingSoon(){
   alert("Môn này đang cập nhật đề, quay lại sau nhé!");
 }
-
+function comingSoonTrueFalse(){
+  alert("Phần đề đúng/sai đang cập nhật, quay lại sau nhé!");
+}
 //===icon đề==//
 document.querySelectorAll(".exam").forEach(exam => {
     const mon = exam.getAttribute("data-mon");
@@ -1105,7 +1343,7 @@ document.querySelectorAll(".exam").forEach(exam => {
     let icon = "📄"; // mặc định
 
     if(mon === "dungsai"){
-        icon = "✔️";
+        icon = "📝";
     }
 
     exam.innerHTML = `
@@ -1115,6 +1353,86 @@ document.querySelectorAll(".exam").forEach(exam => {
         </div>
     `;
 });
+
+//===== NÚT XEM THÊM ĐỀ CÁC SỞ =====//
+const exams = document.querySelectorAll(".exam");
+
+const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+let visibleCount = 8;
+
+function updateExamVisibility(){
+    exams.forEach((exam,index)=>{
+        if(index < visibleCount){
+            exam.style.display = "block";
+        }else{
+            exam.style.display = "none";
+        }
+    });
+
+    if(visibleCount >= exams.length){
+        loadMoreBtn.style.display = "none";
+    }
+}
+
+updateExamVisibility();
+
+loadMoreBtn.addEventListener("click", function(){
+    visibleCount += 8;
+    updateExamVisibility();
+});
+
+
+//===== NÚT XEM THÊM ĐỀ ĐÚNG SAI =====//
+const trueFalseExams = document.querySelectorAll(
+    ".truefalse-list .exam"
+);
+
+const loadMoreTrueFalseBtn = document.getElementById(
+    "loadMoreTrueFalseBtn"
+);
+
+let visibleTrueFalse = 4; // hiển thị đúng 1 hàng vì grid đang 4 cột
+
+function updateTrueFalseVisibility(){
+    trueFalseExams.forEach((exam,index)=>{
+        if(index < visibleTrueFalse){
+            exam.style.display = "block";
+        }else{
+            exam.style.display = "none";
+        }
+    });
+
+    if(visibleTrueFalse >= trueFalseExams.length){
+        loadMoreTrueFalseBtn.style.display = "none";
+    }
+}
+
+updateTrueFalseVisibility();
+
+loadMoreTrueFalseBtn.addEventListener("click", function(){
+    visibleTrueFalse += 4;
+    updateTrueFalseVisibility();
+});
+
+//===luot truy cao==//
+function fakeVisitCounter(){
+    let current = localStorage.getItem("fakeVisits");
+
+    if(!current){
+        current = 1287;
+    }else{
+        current = parseInt(current);
+    }
+
+    current += Math.floor(Math.random()*5)+1;
+
+    localStorage.setItem("fakeVisits", current);
+
+    document.getElementById("visitCount").innerText = current;
+}
+
+fakeVisitCounter();
 // ===== BÁN ĐỀ =====
 
 const links = {
@@ -1191,15 +1509,18 @@ const links = {
 const orders = {};
 let attempts = 0;
 
-function generateCode(){
-  return "CS2" + Date.now() + Math.floor(Math.random()*9999);
+function generateCode(examId){
+  return "TC" 
+        + Date.now() 
+        + examId 
+        + Math.floor(Math.random()*9999);
 }
 
 function buyExam(id){
 
   attempts = 0;
 
-  const code = generateCode();
+  const code = generateCode(id);
 
   orders[code] = {
     id: id,
@@ -1321,8 +1642,15 @@ z-index:9999;
     <input id="codeInput" placeholder="Nhập mã" style="width:100%;padding:8px">
 
     <br><br>
-    <button onclick="checkPayment()">Xác nhận</button>
-    <button onclick="closeBox()">Đóng</button>
+    <div class="popup-buttons">
+  <button class="confirm-btn" onclick="checkPayment()">
+    Xác nhận
+  </button>
+
+  <button class="close-btn" onclick="closeBox()">
+    Đóng
+  </button>
+</div>
   </div>
 </div>
 </body>
