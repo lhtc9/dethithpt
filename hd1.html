@@ -16,7 +16,7 @@
 }
 
 body{
-  background:#f4f6f9;
+  background:linear-gradient(180deg,#eef5ff,#f8fbff,#ffffff);
   display:flex;
   flex-direction:column;
   min-height:100vh;
@@ -85,18 +85,20 @@ nav a{
 
 /* ===== FORM ===== */
 .container {
-  max-width: 800px;   /* 🔥 rộng hơn */
-  width: 90%;          /* co giãn theo màn hình */
-  margin: 40px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width:900px;
+  width:90%;
+  margin:50px auto;
+  padding:0;
+  background:none;
+  box-shadow:none;
 }
 
 h2{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:25px;
+  font-size:30px;
+  font-weight:700;
+  color:#1e3a8a;
 }
 
 .form-wrapper iframe{
@@ -240,6 +242,66 @@ h2{
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     border: 1px solid #dce8ff;
 }
+.card{
+    background:white;
+    padding:30px;
+    border-radius:24px;
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(44,123,229,0.08);
+    border:1px solid #edf2ff;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(44,123,229,0.15);
+}
+
+.step{
+    margin:14px 0;
+    padding:16px;
+    background:#f8fbff;
+    border-radius:14px;
+    border-left:5px solid #2c7be5;
+    line-height:1.7;
+    font-size:16px;
+}
+
+.warning{
+    background:linear-gradient(135deg,#fff5f5,#fff1f2);
+    padding:18px;
+    border-radius:14px;
+    border-left:5px solid #ef4444;
+    line-height:1.8;
+    color:#b91c1c;
+}
+
+.support{
+    background:linear-gradient(135deg,#f0fdf4,#ecfdf5);
+    padding:18px;
+    border-radius:14px;
+    border-left:5px solid #22c55e;
+    line-height:1.8;
+}
+
+.note{
+    margin-top:18px;
+    padding:14px;
+    background:#eff6ff;
+    border-radius:12px;
+    text-align:center;
+    font-weight:bold;
+    color:#2563eb;
+}
+.warning-step{
+    margin:14px 0;
+    padding:16px;
+    background:#fff5f5;
+    border-radius:14px;
+    border-left:5px solid #ef4444;
+    line-height:1.7;
+    font-size:16px;
+    color:#b91c1c;
+}
 </style>
 </head>
 <body>
@@ -262,15 +324,62 @@ h2{
   <div class="container">
     <h2>Hướng dẫn tải đề</h2>
 
-    <div class="form-wrapper">
-  <iframe 
-    src="hd.html"
-    width="120%" 
-    height="700" 
-    frameborder="0">
-  </iframe>
+    <div class="card">
+        <div class="step">👉 Bước 1: Bấm nút <b>Tải đề</b></div>
+        <div class="step">👉 Bước 2: Quét mã QR bằng app ngân hàng hoặc ví điện tử</div>
+        <div class="step">👉 Bước 3: Chuyển khoản đúng nội dung</div>
+        <div class="step">👉 Bước 4: Nhập mã để tải đề (mã = nội dung chuyển khoản)</div>
+
+        <div class="note">
+            ⏱️ Sau khi chuyển khoản khoảng 3 giây hệ thống sẽ tự mở đề
+        </div>
+    </div>
+
+        <div class="card">
+    <h2>⚠️ Lưu ý quan trọng</h2>
+
+    <div class="warning-step">
+        ❗ Phải chuyển khoản và nhập đúng nội dung chuyển khoản
+    </div>
+
+    <div class="warning-step">
+        ❗ Không chỉnh sửa mã
+    </div>
+
+    <div class="warning-step">
+        ❗ Mỗi mã chỉ dùng 1 lần
+    </div>
+
+    <div class="warning-step">
+        ❗ Mỗi mã chỉ có <b>15 phút sử dụng</b>
+    </div>
+
+    </div>
+
+    <div class="card">
+        <h2>📱 Hướng dẫn quét QR</h2>
+
+        <div class="step">
+            ✔ Mở app ngân hàng hoặc ví điện tử(MB, BIDV, Vietcombank, ZaloPay, Momo...)
+        </div>
+        <div class="step">
+            ✔ Chọn chức năng Quét QR
+        </div>
+        <div class="step">
+            ❌ Không dùng camera thường
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📞 Hỗ trợ</h2>
+
+        <div class="support">
+            👉 Zalo: <b>0388411493</b><br>
+            👉 Email: <b>chaulht18.tvu@gmail.com</b><br>
+            👉 Gửi ảnh chuyển khoản nếu gặp lỗi để được hỗ trợ nhanh nhất.
+        </div>
+    </div>
 </div>
-  </div>
 <div class="visit-counter">
     Hôm nay có <span id="visitCount">0</span> lượt truy cập
 </div>
