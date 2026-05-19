@@ -101,7 +101,7 @@ nav a{
 .banner {
   width: 100%;
   height: 220px; /* mobile */
-  background: url('anh/baner.png') center/cover no-repeat;
+  background: url('anh/bn5.png') center/cover no-repeat;
 }
 
 @media (min-width: 768px) {
@@ -1413,7 +1413,9 @@ document.querySelectorAll(".exam").forEach(exam => {
 });
 
 //===== NÚT XEM THÊM ĐỀ CÁC SỞ =====//
-const exams = document.querySelectorAll(".exam");
+const exams = document.querySelectorAll(
+  ".exam-list:not(.truefalse-list) .exam"
+);
 
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
@@ -1432,6 +1434,34 @@ function updateExamVisibility(){
         loadMoreBtn.style.display = "none";
     }
 }
+
+// ===== RANDOM ĐỀ KHI LOAD TRANG =====
+function shuffleElements(containerSelector){
+
+    const container = document.querySelector(containerSelector);
+
+    const items = Array.from(
+        container.querySelectorAll(".exam")
+    );
+
+    // Fisher-Yates shuffle
+    for(let i = items.length - 1; i > 0; i--){
+
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [items[i], items[j]] = [items[j], items[i]];
+    }
+
+    items.forEach(item => {
+        container.appendChild(item);
+    });
+}
+
+// random đề thường
+shuffleElements(".exam-list:not(.truefalse-list)");
+
+// random đề đúng/sai
+shuffleElements(".truefalse-list");
 
 updateExamVisibility();
 
