@@ -723,6 +723,10 @@ nav a{
     transform:scale(1);
   }
 }
+a{
+  text-decoration: none;
+  color:#dcdcdc;
+}
 </style>
 </head>
 
@@ -744,7 +748,7 @@ nav a{
 </div>
   
 <header>
-  <h1>Đề Ôn Thi Tốt Nghiệp THPT 2026</h1>
+  <h1><a href="index.html">Đề Ôn Thi Tốt Nghiệp THPT 2026</a> </h1>
 
   <!-- Nút 3 gạch -->
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -802,20 +806,20 @@ nav a{
 
 <!--Mon Toan-->
 
-<div class="exam" data-new="true" data-mon="toan">
+<div class="exam" data-mon="toan">
   <h4>SỞ GD&ĐT THANH HÓA</h4>
   <p>Môn: Toán</p>
   <a href="#" onclick="buyExam('TOAN1'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-new="true" data-mon="toan">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+<div class="exam" data-mon="toan">
+  <h4>SỞ GD&ĐT BẮC NINH 1</h4>
   <p>Môn: Toán</p>
   <a href="#" onclick="buyExam('TOAN2'); return false;">Tải đề</a>
 </div>
 
-<div class="exam"  data-new="true" data-mon="toan">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+<div class="exam" data-mon="toan">
+  <h4>SỞ GD&ĐT BẮC NINH 2</h4>
   <p>Môn: Toán</p>
   <a href="#" onclick="buyExam('TOAN3'); return false;">Tải đề</a>
 </div>
@@ -833,7 +837,7 @@ nav a{
 </div>
 
 <div class="exam" data-mon="toan">
-  <h4>SỞ GD&ĐT TP HCM</h4>
+  <h4>SỞ GD&ĐT TP.HCM 1</h4>
   <p>Môn: Toán</p>
   <a href="#" onclick="buyExam('TOAN6'); return false;">Tải đề</a>
 </div>
@@ -887,7 +891,7 @@ nav a{
 </div>
 
 <div class="exam" data-mon="toan">
-  <h4>SỞ GD-ĐT TP.HCM</h4>
+  <h4>SỞ GD-ĐT TP.HCM 2</h4>
   <p>Môn: Toán</p>
   <a href="#" onclick="buyExam('TOAN15'); return false;">Tải đề</a>
 </div>
@@ -902,6 +906,18 @@ nav a{
   <h4>CỤM TRƯỜNG TRUNG HỌC PHỔ THÔNG</h4>
   <p>Môn: Toán</p>
   <a href="#" onclick="buyExam('TOAN17'); return false;">Tải đề</a>
+</div>
+
+<div class="exam" data-new="true" data-mon="toan">
+  <h4>SỞ GD&ĐT VĨNH LONG</h4>
+  <p>Môn: Toán</p>
+  <a href="#" onclick="buyExam('TOAN18'); return false;">Tải đề</a>
+</div>
+
+<div class="exam" data-new="true" data-mon="toan">
+  <h4>SỞ GD&ĐT ĐỒNG THÁP</h4>
+  <p>Môn: Toán</p>
+  <a href="#" onclick="buyExam('TOAN19'); return false;">Tải đề</a>
 </div>
 
 <!-- Mon su-->
@@ -930,13 +946,13 @@ nav a{
   <a href="#" onclick="buyExam('SU4'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-new="true" data-mon="su">
+<div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT HÀ NỘI</h4>
   <p>Môn: Lịch Sử</p>
   <a href="#" onclick="buyExam('SU5'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-new="true" data-mon="su">
+<div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT BẮC NINH 3</h4>
   <p>Môn: Lịch Sử</p>
   <a href="#" onclick="buyExam('SU6'); return false;">Tải đề</a>
@@ -990,6 +1006,30 @@ nav a{
   <a href="#" onclick="buyExam('SU14'); return false;">Tải đề</a>
 </div>
 
+<div class="exam" data-new="true" data-mon="su">
+  <h4>SỞ GD&ĐT VĨNH LONG</h4>
+  <p>Môn: Lịch Sử</p>
+  <a href="#" onclick="buyExam('SU15'); return false;">Tải đề</a>
+</div>
+
+<div class="exam" data-new="true" data-mon="su">
+  <h4>SỞ GD&ĐT ĐỒNG THÁP</h4>
+  <p>Môn: Lịch Sử</p>
+  <a href="#" onclick="buyExam('SU16'); return false;">Tải đề</a>
+</div>
+
+<div class="exam" data-new="true" data-mon="su">
+  <h4>SỞ GD&ĐT AN GIANG</h4>
+  <p>Môn: Lịch Sử</p>
+  <a href="#" onclick="buyExam('SU17'); return false;">Tải đề</a>
+</div>
+
+<div class="exam" data-new="true" data-mon="su">
+  <h4>SỞ GD&ĐT CẦN THƠ</h4>
+  <p>Môn: Lịch Sử</p>
+  <a href="#" onclick="buyExam('SU18'); return false;">Tải đề</a>
+</div>
+
 <!--Mon Dia-->
 
 <div class="exam" data-mon="dia">
@@ -999,13 +1039,13 @@ nav a{
 </div>
 
 <div class="exam" data-mon="dia">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 1</h4>
   <p>Môn: Địa Lý</p>
   <a href="#" onclick="buyExam('DIA2'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-new="true" data-mon="dia">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 2</h4>
   <p>Môn: Địa Lý</p>
   <a href="#" onclick="buyExam('DIA3'); return false;">Tải đề</a>
 </div>
@@ -1017,7 +1057,7 @@ nav a{
 </div>
 
 <div class="exam" data-new="true" data-mon="dia">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 3</h4>
   <p>Môn: Địa Lý</p>
   <a href="#" onclick="buyExam('DIA5'); return false;">Tải đề</a>
 </div>
@@ -1053,15 +1093,27 @@ nav a{
 </div>
 
 <div class="exam" data-mon="dia">
-  <h4>SỞ GD&ĐT NGHỆ AN</h4>
+  <h4>SỞ GD&ĐT NGHỆ AN 1</h4>
   <p>Môn: Địa Lý</p>
   <a href="#" onclick="buyExam('DIA11'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="dia">
-  <h4>SỞ GD&ĐT NGHỆ AN</h4>
+  <h4>SỞ GD&ĐT NGHỆ AN 2</h4>
   <p>Môn: Địa Lý</p>
   <a href="#" onclick="buyExam('DIA12'); return false;">Tải đề</a>
+</div>
+
+<div class="exam" data-new="true" data-mon="dia">
+  <h4>SỞ GD&ĐT VĨNH LONG</h4>
+  <p>Môn: Địa Lý</p>
+  <a href="#" onclick="buyExam('DIA13'); return false;">Tải đề</a>
+</div>
+
+<div class="exam" data-new="true" data-mon="dia">
+  <h4>SỞ GD&ĐT ĐỒNG THÁP</h4>
+  <p>Môn: Địa Lý</p>
+  <a href="#" onclick="buyExam('DIA14'); return false;">Tải đề</a>
 </div>
 
 <!--Mon Van-->
@@ -1079,7 +1131,7 @@ nav a{
 </div>
 
 <div class="exam" data-mon="van">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 1</h4>
   <p>Môn: Ngữ Văn</p>
   <a href="#" onclick="buyExam('VAN3'); return false;">Tải đề</a>
 </div>
@@ -1091,7 +1143,7 @@ nav a{
 </div>
 
 <div class="exam" data-mon="van">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 2</h4>
   <p>Môn: Ngữ Văn</p>
   <a href="#" onclick="buyExam('VAN5'); return false;">Tải đề</a>
 </div>
@@ -1108,22 +1160,29 @@ nav a{
   <a href="#" onclick="buyExam('VAN7'); return false;">Tải đề</a>
 </div>
 
+<div class="exam" data-new="true" data-mon="van">
+  <h4>SỞ GD&ĐT ĐỒNG THÁP</h4>
+  <p>Môn: Ngữ Văn</p>
+  <a href="#" onclick="buyExam('VAN9'); return false;">Tải đề</a>
+</div>
+
+
 <!--Mon Li-->
 
 <div class="exam" data-mon="li">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 1</h4>
   <p>Môn: Vật Lí</p>
   <a href="#" onclick="buyExam('LI1'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 2</h4>
   <p>Môn: Vật Lí</p>
   <a href="#" onclick="buyExam('LI2'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 3</h4>
   <p>Môn: Vật Lí</p>
   <a href="#" onclick="buyExam('LI3'); return false;">Tải đề</a>
 </div>
@@ -1141,7 +1200,7 @@ nav a{
 </div>
 
 <div class="exam" data-mon="li">
-  <h4>SỞ GD-ĐT BẮC NINH</h4>
+  <h4>SỞ GD-ĐT BẮC NINH 4</h4>
   <p>Môn: Vật Lí</p>
   <a href="#" onclick="buyExam('LI6'); return false;">Tải đề</a>
 </div>
@@ -1164,16 +1223,22 @@ nav a{
   <a href="#" onclick="buyExam('LI9'); return false;">Tải đề</a>
 </div>
 
+<div class="exam" data-new="true" data-mon="li">
+  <h4>SỞ GD&ĐT VĨNH LONG</h4>
+  <p>Môn: Vật Lí</p>
+  <a href="#" onclick="buyExam('LI10'); return false;">Tải đề</a>
+</div>
+
 <!--Mon Anh-->
 
 <div class="exam" data-mon="anh">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 1</h4>
   <p>Môn: Tiếng Anh</p>
   <a href="#" onclick="buyExam('ANH1'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="anh">
-  <h4>SỞ GD&ĐT BẮC NINH</h4>
+  <h4>SỞ GD&ĐT BẮC NINH 2</h4>
   <p>Môn: Tiếng Anh</p>
   <a href="#" onclick="buyExam('ANH2'); return false;">Tải đề</a>
 </div>
@@ -1219,6 +1284,12 @@ nav a{
   <p>Môn: Tiếng Anh</p>
   <a href="#" onclick="buyExam('ANH9'); return false;">Tải đề</a>
 </div>
+
+<div class="exam" data-new="true" data-mon="anh">
+  <h4>SỞ GD&ĐT VĨNH LONG</h4>
+  <p>Môn: Tiếng Anh</p>
+  <a href="#" onclick="buyExam('ANH20'); return false;">Tải đề</a>
+</div>
 </div>
 
 <div class="load-more-wrap">
@@ -1226,30 +1297,38 @@ nav a{
 </div>
 
 
+
+
+
+
+
 <!-- PHẦN ĐỀ ĐÚNG / SAI -->
 <h2 class="truefalse-title">📝 ĐỀ ĐÚNG / SAI</h2>
 
 <div class="exam-list truefalse-list">
 
-  <div class="exam dungsai-card" data-mon="dungsai">
-    <p>Môn: Toán</p>
-    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
-      Tải đề
-    </a>
+  <div class="exam dungsai-card" data-new="true" data-mon="dungsai">
+    <h4>Cách mạng tháng 8</h4>
+    <p>Môn: Lịch Sử</p>
+  <a href="#" onclick="buyExam('DS1'); return false;">
+    Tải đề
+  </a>
   </div>
 
-  <div class="exam dungsai-card" data-mon="dungsai">
-    <p>Môn: Toán</p>
-    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
-      Tải đề
-    </a>
+  <div class="exam dungsai-card" data-new="true" data-mon="dungsai">
+    <h4>Công cuộc đổi mới 1</h4>
+    <p>Môn: Lịch Sử</p>
+  <a href="#" onclick="buyExam('DS2'); return false;">
+    Tải đề
+  </a>
   </div>
 
-  <div class="exam dungsai-card" data-mon="dungsai">
-    <p>Môn: Sử</p>
-    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
-      Tải đề
-    </a>
+  <div class="exam dungsai-card" data-new="true" data-mon="dungsai">
+    <h4>Công cuộc đổi mới 2</h4>
+  <p>Môn: Lịch Sử</p>
+  <a href="#" onclick="buyExam('DS3'); return false;">
+    Tải đề
+  </a>
   </div>
 
   <div class="exam dungsai-card" data-mon="dungsai">
@@ -1340,39 +1419,64 @@ nav a{
 <script>
 let currentFilter = "all";
 
-/* FILTER + SEARCH */
+let visibleCount = 8;
+
 function applyFilter(){
+
   const keyword = document
     .getElementById("searchInput")
     .value
     .toLowerCase()
     .trim();
 
-  const exams = document.querySelectorAll(".exam-list:not(.truefalse-list) .exam");
+  const exams = document.querySelectorAll(
+    ".exam-list:not(.truefalse-list) .exam"
+  );
 
-  // tách từng từ
   const keywords = keyword.split(" ");
 
+  // lọc đúng môn + đúng tìm kiếm
+  const filtered = [];
+
   exams.forEach(exam => {
+
     const mon = exam.getAttribute("data-mon");
     const text = exam.innerText.toLowerCase();
 
-    const matchMon = (
-      currentFilter === "all" || 
-      mon === currentFilter
-    );
+    const matchMon =
+      currentFilter === "all" ||
+      mon === currentFilter;
 
-    // tất cả từ đều phải tồn tại
-    const matchSearch = keywords.every(word => 
+    const matchSearch = keywords.every(word =>
       text.includes(word)
     );
 
-    exam.style.display = (matchMon && matchSearch)
-      ? "block"
-      : "none";
-  });
-}
+    if(matchMon && matchSearch){
+      filtered.push(exam);
+    }
 
+    exam.style.display = "none";
+  });
+
+  // chỉ hiện số lượng cần
+  filtered.forEach((exam,index)=>{
+
+    if(index < visibleCount){
+      exam.style.display = "block";
+    }
+
+  });
+
+  // nút xem thêm
+  if(filtered.length > visibleCount){
+    loadMoreBtn.style.display = "inline-block";
+  }else{
+    loadMoreBtn.style.display = "none";
+  }
+
+  // lưu danh sách hiện tại
+  window.currentFilteredExams = filtered;
+}
 /* SEARCH */
 
 /* ĐỌC URL */
@@ -1382,8 +1486,6 @@ const mon = params.get("mon");
 if(mon){
   currentFilter = mon;
 }
-
-applyFilter(); // 🔥 luôn chạy
 
 /* MENU MOBILE */
 function toggleMenu() {
@@ -1422,12 +1524,13 @@ if (!isDev) {
 }
 
 function filterSubject(subject){
+
   currentFilter = subject;
 
-  // reset ô tìm kiếm
+  visibleCount = 8;
+
   document.getElementById("searchInput").value = "";
 
-  // đổi active button
   document.querySelectorAll(".subject-menu button").forEach(btn=>{
     btn.classList.remove("active");
   });
@@ -1478,9 +1581,21 @@ const exams = document.querySelectorAll(
   ".exam-list:not(.truefalse-list) .exam"
 );
 
+// random card đề thường
+shuffleElements(".exam-list:not(.truefalse-list)");
+
+// random card đúng sai
+shuffleElements(".truefalse-list");
+
+// random card đề thường
+shuffleElements(".exam-list:not(.truefalse-list)");
+
+// random card đúng/sai
+shuffleElements(".truefalse-list");
+
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-let visibleCount = 8;
+applyFilter();
 
 function updateExamVisibility(){
     exams.forEach((exam,index)=>{
@@ -1496,7 +1611,6 @@ function updateExamVisibility(){
     }
 }
 
-// ===== RANDOM + ƯU TIÊN NEW =====
 function shuffleElements(containerSelector){
 
     const container = document.querySelector(containerSelector);
@@ -1523,7 +1637,8 @@ function shuffleElements(containerSelector){
                 Math.random() * (i + 1)
             );
 
-            [arr[i], arr[j]] = [arr[j], arr[i]];
+            [arr[i], arr[j]] =
+            [arr[j], arr[i]];
         }
 
         return arr;
@@ -1533,17 +1648,17 @@ function shuffleElements(containerSelector){
     shuffle(newItems);
     shuffle(normalItems);
 
-    // NEW luôn lên đầu
+    // NEW luôn nằm đầu
     const finalItems = [
         ...newItems,
         ...normalItems
     ];
 
+    // render lại
     finalItems.forEach(item => {
         container.appendChild(item);
     });
 }
-
 //===== NÚT XEM THÊM ĐỀ ĐÚNG SAI =====//
 const trueFalseExams = document.querySelectorAll(
     ".truefalse-list .exam"
@@ -1571,6 +1686,14 @@ function updateTrueFalseVisibility(){
 
 updateTrueFalseVisibility();
 
+loadMoreBtn.addEventListener("click", function(){
+
+  visibleCount += 8;
+
+  applyFilter();
+
+});
+
 loadMoreTrueFalseBtn.addEventListener("click", function(){
     visibleTrueFalse += 4;
     updateTrueFalseVisibility();
@@ -1597,16 +1720,16 @@ fakeVisitCounter();
 // ===== BÁN ĐỀ =====
 
 const links = {
-  TOAN1: "https://drive.google.com/file/d/1aNzGj0LhF_b3tB8FQJLkdo-_ohYkp_yC/view?usp=sharing",
+  TOAN1: "https://drive.google.com/file/d/1aNzGj0LhF_b3tB8FQJLkdo-_ohYkp_yC/view",
   TOAN2: "#",
-  TOAN3: "https://drive.google.com/file/d/13e-bxjCa6IIQOeNbxFxJ0WmwHb2ujWwf/view?usp=sharing",
-  TOAN4: "https://drive.google.com/file/d/1rkIJSpSUGmr1gytS7ThziwmbcMhNBfL6/view?usp=sharing",
-  TOAN5: "https://drive.google.com/file/d/1w7TK_K8Y6ELj2fR0cl5lNNB9hWenFKQL/view?usp=drive_link",
-  TOAN6: "https://drive.google.com/file/d/1F6mekZaE1chzVa_MjHtjpmRE1iDMl18B/view?usp=sharing",
-  TOAN7: "https://drive.google.com/file/d/1K2fkdFS34-DyRLfqrXvsQEACRlF1waD3/view?usp=sharing",
-  TOAN8: "https://drive.google.com/file/d/1yeYIrswd0I9TGB17KK6grWFol_8S-r1i/view?usp=sharing",
-  TOAN9: "https://drive.google.com/file/d/14KkS2klEjlfBlQVpSJFDr4khhiCHnO92/view?usp=sharing",
-  TOAN10: "https://drive.google.com/file/d/1ni3oEwkTBqJoZC8lD3Y9RiQRENWbbJUY/view?usp=sharing",
+  TOAN3: "https://drive.google.com/file/d/13e-bxjCa6IIQOeNbxFxJ0WmwHb2ujWwf/view",
+  TOAN4: "https://drive.google.com/file/d/1rkIJSpSUGmr1gytS7ThziwmbcMhNBfL6/view",
+  TOAN5: "https://drive.google.com/file/d/1w7TK_K8Y6ELj2fR0cl5lNNB9hWenFKQL/view",
+  TOAN6: "https://drive.google.com/file/d/1F6mekZaE1chzVa_MjHtjpmRE1iDMl18B/view",
+  TOAN7: "https://drive.google.com/file/d/1K2fkdFS34-DyRLfqrXvsQEACRlF1waD3/view?",
+  TOAN8: "https://drive.google.com/file/d/1yeYIrswd0I9TGB17KK6grWFol_8S-r1i/view",
+  TOAN9: "https://drive.google.com/file/d/14KkS2klEjlfBlQVpSJFDr4khhiCHnO92/view?",
+  TOAN10: "https://drive.google.com/file/d/1ni3oEwkTBqJoZC8lD3Y9RiQRENWbbJUY/view",
   TOAN11: "https://drive.google.com/file/d/1Oi02_vR224SawmmgrkiXGLz-HXwoyn_-/view",
   TOAN12: "https://drive.google.com/file/d/1Vu-wFQxSDY2drDaZ27hBcS2lGim0zDli/view",
   TOAN13: "https://drive.google.com/file/d/1kW7EcXLu4vA1zZtDYmUzK3nGgb9wB-5J/view",
@@ -1614,6 +1737,8 @@ const links = {
   TOAN15: "https://docs.google.com/document/d/1OrJl4d5vLpHn24cJNuS_846DTgY1tGxV/edit",
   TOAN16: "https://docs.google.com/document/d/16mHiMxGVpwv0ZU_q01XPK1R6nqGRj56d/edit",
   TOAN17: "https://drive.google.com/file/d/19f7N6aOxZ17L_jrTEeihJFMd4E12Of7n/view",
+  TOAN18: "https://drive.google.com/file/d/1VmlU2TDmAg95cXB-5WR8-wC4ubyl9Qr-/view",
+  TOAN19: "https://drive.google.com/file/d/1tIcoVfp8iazaP0x29fYXZSW_K2kOR-yv/view",
   SU1: "https://drive.google.com/file/d/1pz_CUabBYw--nq80QSgqrvfRccF6Nfei/view",
   SU2: "https://drive.google.com/file/d/1GWdv2TAXzqWUu3ZdcBU8k4zHETE7aCSj/view",
   SU3: "https://drive.google.com/file/d/1q4RtJus72BX_o0fk-kqBXNrRFfZUgTKj/view",
@@ -1628,6 +1753,10 @@ const links = {
   SU12: "https://drive.google.com/file/d/10lLlpziugm46QpeHyGqmh7iorjSuOgFf/view",
   SU13: "https://drive.google.com/file/d/1ppOWlLjUY4FUEJ2kGIUGQEErClpMdKdA/view",
   SU14: "https://drive.google.com/file/d/1qL6jkaE7LbD4PwlfdQ6-02s2RcnaSzqa/view",
+  SU15: "https://drive.google.com/file/d/1B4AvzlSPF_g7vk3e_WqKtTKTVeDAvua3/view",
+  SU16: "https://drive.google.com/file/d/17Y3_aTMvpXNpZitgCjuAQ1y3rtF8yavi/view",
+  SU17: "https://drive.google.com/file/d/1-9uY3EW-qKtVhEjKad71KzUEVAF9Jaaa/view",
+  SU18: "https://drive.google.com/file/d/1aRtTa0d4PzbSKtSinRLzZbn6f_-M_mrf/view",
   DIA1: "https://drive.google.com/file/d/1pz_CUabBYw--nq80QSgqrvfRccF6Nfei/view",
   DIA2: "https://drive.google.com/file/d/1ukI1TxFISdV4fTgP0mr8knrYYnPySMm1/view",
   DIA3: "https://drive.google.com/file/d/1GWdv2TAXzqWUu3ZdcBU8k4zHETE7aCSj/view",
@@ -1640,6 +1769,8 @@ const links = {
   DIA10: "https://drive.google.com/file/d/1rSM4nt8nuBz3xQtPDkR-PiqvkGWL7StU/view",
   DIA11: "https://drive.google.com/file/d/12QIPDyHId-Jm0r-na058kFZGDNruXzjt/view",
   DIA12: "https://drive.google.com/file/d/1lNKQ7rBF3icaCwYX-emZ7eMJRX-MJM47/view",
+  DIA13: "https://drive.google.com/file/d/14XFqp6ZNCmwWDtm_7RktmNuR8lnDGmvy/view",
+  DIA14: "https://drive.google.com/file/d/1MgrQWk5k9ov-DAetVuIpz2mA04jZTH1B/view",
   VAN1: "https://docs.google.com/document/d/1Umys_B3rDI3NOzaYMfdHdb4DOmCujM7R/edit",
   VAN2: "https://docs.google.com/document/d/1wiOFG9nciPdf14fO2i6QIRic-zKhkiFq/edit",
   VAN3: "https://docs.google.com/document/d/1r0rGndllabCkmtSS8tpTv9QxaICpHP3z/edit",
@@ -1647,6 +1778,8 @@ const links = {
   VAN5: "https://docs.google.com/document/d/1uz0ox5uV2uRPVf_k2LkqCxcPlsbCgB68/edit",
   VAN6: "https://docs.google.com/document/d/1Q51NSL7kv3vqRx_o-eBNhbaYBN2vQSZ9/edit",
   VAN7: "https://docs.google.com/document/d/1JrpNA-CV-KICUVRkGW4aLAa0y3FPaPmk/edit",
+  VAN8: "https://drive.google.com/file/d/1W8TOzEcbDwHnZXG1csW6IkgC1MTTGn0f/view",
+  VAN9: "https://drive.google.com/file/d/1ue9JJYQ8SVDmbbaVPfEG-DM7W--G2A5j/view",
   LI1: "https://drive.google.com/file/d/1JeKnBouimZGxVe-YZAEN1_SRYr7eXwe3/view",
   LI2: "https://drive.google.com/file/d/1RlMt9FsNxwt3Ao7l-k1LqSLMnuwO_l7d/view",
   LI3: "https://drive.google.com/file/d/1qiKVFFSe7v4sqv6O-bGPHIMwqpyhp3Dh/view",
@@ -1656,6 +1789,7 @@ const links = {
   LI7: "https://drive.google.com/file/d/1ua7KSjEwYGJuoK-_Ayu2bc1UjUHgB420/view",
   LI8: "https://drive.google.com/file/d/1jN2zmxOmdIVCTVIAu3a5JUIQba_Q-rno/view",
   LI9: "https://drive.google.com/file/d/1z3IOsRyvS0zdT8ZJj-eC-Av8jUgDhw5a/view",
+  LI10: "https://drive.google.com/file/d/1WkGsxsgM1tg1XYeFuEQXy-kRAPV3NAOH/view",
   ANH1: "https://docs.google.com/document/d/19cVcU9Io1pZEaMuR1v4MgslY_ZkTGv6B/edit",
   ANH2: "https://docs.google.com/document/d/1A5ay0_uorMli1K_M-HPL5n_KhBLpKWRx/edit",
   ANH3: "https://docs.google.com/document/d/10DzkoshvCMaH1vIVpJ9yJdd8YWOK3G2g/edit",
@@ -1664,7 +1798,11 @@ const links = {
   ANH6: "https://docs.google.com/document/d/1EWJS5thi0cffLj4pRFVmsJxpxYIfzuf8/edit",
   ANH7: "https://docs.google.com/document/d/1_o5Go-BXTntuGlD_RYuH4uvmE2rZv6Hs/edit",
   ANH8: "https://docs.google.com/document/d/17SsuQ4ZhBGDn3d_CuVQZ1L1MUQF94bpx/edit",
-  ANH9: "https://docs.google.com/document/d/1Rsn5jxTZ4X0jWpEG96LkOqta9AiKoTc8/edit"
+  ANH9: "https://docs.google.com/document/d/1Rsn5jxTZ4X0jWpEG96LkOqta9AiKoTc8/edit",
+  ANH20: "https://drive.google.com/file/d/1CRAYRVZrStZc38zMc8pZxrP1qXbtq0fI/view",
+  DS1: "https://drive.google.com/file/d/181XQyeyYGDkl455TXMvpegfmjn8xAek6/view",
+  DS2: "https://drive.google.com/file/d/1eiGX2Tm6VxYHUdeTTCmOcxIL16biAd1B/view",
+  DS3: "https://drive.google.com/file/d/1BL-zIuJkj4mhEmDWineuxbFGUdXY3zy0/view"
 };
 
 const orders = {};
@@ -1697,8 +1835,19 @@ function buyExam(id){
   const bank = "Sacombank"; 
   const stk = "070155969154";
 
+  // ===== GIÁ =====
+  let amount = 4000;
+
+  // đề đúng/sai
+  if(id.startsWith("DS")){
+    amount = 10000;
+  }
+
+document.getElementById("priceText").innerText =
+amount.toLocaleString("vi-VN") + "đ/đề";
+
   document.getElementById("qrImg").src =
-  `https://img.vietqr.io/image/${bank}-${stk}-compact.png?amount=4000&addInfo=${code}`;
+`https://img.vietqr.io/image/${bank}-${stk}-compact.png?amount=${amount}&addInfo=${code}`;
 
   document.getElementById("paymentBox").style.display = "flex";
 }
@@ -1838,7 +1987,7 @@ Quét mã thanh toán
       <b id="note"></b>
     </div>
 
-    <p style="
+    <p id="priceText" style="
 margin-bottom:15px;
 color:#000000;
 font-size:18px;
