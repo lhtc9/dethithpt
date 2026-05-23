@@ -675,6 +675,54 @@ nav a{
         transform:translate(-120px,-70px);
     }
 }
+.exam{
+  position:relative;
+}
+
+/* ===== TAG NEW ĐẸP ===== */
+.new-tag{
+  position:absolute;
+  top:12px;
+  right:12px;
+
+  background:linear-gradient(
+    135deg,
+    #ff512f,
+    #ff7b00
+  );
+
+  color:white;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1px;
+
+  padding:5px 11px;
+
+  border-radius:30px;
+
+  box-shadow:
+    0 4px 10px rgba(255,123,0,0.35);
+
+  z-index:10;
+
+  animation:newPulse 1.8s infinite;
+}
+
+/* hiệu ứng nhẹ */
+@keyframes newPulse{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.08);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+}
 </style>
 </head>
 
@@ -754,192 +802,192 @@ nav a{
 
 <!--Mon Toan-->
 
-<div class="exam" data-mon="toan">
+<div class="exam" data-new="true" data-mon="toan">
   <h4>SỞ GD&ĐT THANH HÓA</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan1'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN1'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-mon="toan">
+<div class="exam" data-new="true" data-mon="toan">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan2'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN2'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-mon="toan">
+<div class="exam"  data-new="true" data-mon="toan">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan3'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN3'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>TRƯỜNG THPT CHUYÊN BẮC NINH L1</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan4'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN4'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>SGD & ĐT TỈNH NINH BÌNH L1</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan5'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN5'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>SỞ GD&ĐT TP HCM</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan6'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN6'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>SỞ GD&ĐT HẢI PHÒNG</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan7'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN7'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>SỞ GD&ĐT PHÚ THỌ</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan8'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN8'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>SỞ GD&ĐT NGHỆ AN</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan9'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN9'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>SỞ GD&ĐT BÌNH DƯƠNG</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan10'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN10'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>TRƯỜNG ĐẠI HỌC KHTN HÀ NỘI</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan11'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN11'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>SỞ GD&ĐT SƠN LA</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan12'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN12'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>SGD&DT TUYÊN QUANG</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan13'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN13'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>TRƯỜNG ĐẠI HỌC VINH</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan14'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN14'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>SỞ GD-ĐT TP.HCM</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan15'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN15'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>CỤM TRƯỜNG THPT QV1 - TT1 – LVT</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan16'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN16'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="toan">
   <h4>CỤM TRƯỜNG TRUNG HỌC PHỔ THÔNG</h4>
   <p>Môn: Toán</p>
-  <a href="#" onclick="buyExam('toan17'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('TOAN17'); return false;">Tải đề</a>
 </div>
 
 <!-- Mon su-->
 
-<div class="exam" data-mon="su">
+<div class="exam" data-new="true" data-mon="su">
   <h4>LIÊN TRƯỜNG THPT NGHỆ AN</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su1'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU1'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-mon="su">
+<div class="exam" data-new="true" data-mon="su">
   <h4>SỞ GD&ĐT BẮC NINH 1</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su2'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU2'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT BẮC NINH 2</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su3'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU3'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT NINH BÌNH 1</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su4'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU4'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-mon="su">
+<div class="exam" data-new="true" data-mon="su">
   <h4>SỞ GD&ĐT HÀ NỘI</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su5'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU5'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-mon="su">
+<div class="exam" data-new="true" data-mon="su">
   <h4>SỞ GD&ĐT BẮC NINH 3</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su6'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU6'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT QUẢNG NINH</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su7'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU7'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT HÀ TĨNH</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su8'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU8'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT HẢI PHÒNG 1</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su9'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU9'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT PHÚ THỌ</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su10'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU10'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT HẢI PHÒNG 2</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su11'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU11'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT HƯNG YÊN</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su12'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU12'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT BẮC NINH 4</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su13'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU13'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="su">
   <h4>SỞ GD&ĐT NINH BÌNH 2</h4>
   <p>Môn: Lịch Sử</p>
-  <a href="#" onclick="buyExam('su14'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('SU14'); return false;">Tải đề</a>
 </div>
 
 <!--Mon Dia-->
@@ -947,73 +995,73 @@ nav a{
 <div class="exam" data-mon="dia">
   <h4>LIÊN TRƯỜNG THPT NGHỆ AN</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia1'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA1'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="dia">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia2'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA2'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-mon="dia">
+<div class="exam" data-new="true" data-mon="dia">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia3'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA3'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="dia">
   <h4>TRƯỜNG THPT KIM LIÊN</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia4'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA4'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-mon="dia">
+<div class="exam" data-new="true" data-mon="dia">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia5'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA5'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="dia">
   <h4>CỤM TRƯỜNG THPT BẮC NINH</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia6'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA6'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="dia">
   <h4>SỞ GD&ĐT THÁI NGUYÊN</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia7'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA7'); return false;">Tải đề</a>
 </div>
 
-<div class="exam" data-mon="dia">
+<div class="exam" data-new="true" data-mon="dia">
   <h4>SỞ GD&ĐT NINH BÌNH</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia8'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA8'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="dia">
   <h4>SỞ GD&ĐT HÀ NỘI</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia9'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA9'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="dia">
   <h4>SỞ GD&ĐT HÀ TĨNH</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia10'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA10'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="dia">
   <h4>SỞ GD&ĐT NGHỆ AN</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia11'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA11'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="dia">
   <h4>SỞ GD&ĐT NGHỆ AN</h4>
   <p>Môn: Địa Lý</p>
-  <a href="#" onclick="buyExam('dia12'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('DIA12'); return false;">Tải đề</a>
 </div>
 
 <!--Mon Van-->
@@ -1021,43 +1069,43 @@ nav a{
 <div class="exam" data-mon="van">
   <h4>SỞ GD&ĐT VĨNH PHÚC</h4>
   <p>Môn: Ngữ Văn</p>
-  <a href="#" onclick="buyExam('van1'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('VAN1'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="van">
   <h4>SỞ GIÁO DỤC VÀ ĐÀO TẠO HÀ TĨNH</h4>
   <p>Môn: Ngữ Văn</p>
-  <a href="#" onclick="buyExam('van2'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('VAN2'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="van">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Ngữ Văn</p>
-  <a href="#" onclick="buyExam('van3'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('VAN3'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="van">
   <h4>SỞ GD&ĐT TP ĐÀ NẴNG</h4>
   <p>Môn: Ngữ Văn</p>
-  <a href="#" onclick="buyExam('van4'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('VAN4'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="van">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Ngữ Văn</p>
-  <a href="#" onclick="buyExam('van5'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('VAN5'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="van">
   <h4>SỞ GD&ĐT NINH BÌNH</h4>
   <p>Môn: Ngữ Văn</p>
-  <a href="#" onclick="buyExam('van6'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('VAN6'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="van">
   <h4>SỞ GD&ĐT PHÚ THỌ</h4>
   <p>Môn: Ngữ Văn</p>
-  <a href="#" onclick="buyExam('van7'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('VAN7'); return false;">Tải đề</a>
 </div>
 
 <!--Mon Li-->
@@ -1065,55 +1113,55 @@ nav a{
 <div class="exam" data-mon="li">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Vật Lí</p>
-  <a href="#" onclick="buyExam('li1'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('LI1'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Vật Lí</p>
-  <a href="#" onclick="buyExam('li2'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('LI2'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Vật Lí</p>
-  <a href="#" onclick="buyExam('li3'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('LI3'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
   <h4>TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN</h4>
   <p>Môn: Vật Lí</p>
-  <a href="#" onclick="buyExam('li4'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('LI4'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
   <h4>CỤM TRƯỜNG THPT TT1-QV1-LVT (BẮC NINH)</h4>
   <p>Môn: Vật Lí</p>
-  <a href="#" onclick="buyExam('li5'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('LI5'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
   <h4>SỞ GD-ĐT BẮC NINH</h4>
   <p>Môn: Vật Lí</p>
-  <a href="#" onclick="buyExam('li6'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('LI6'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
   <h4>TRƯỜNG THPT CHUYÊN KHTN HÀ NỘI</h4>
   <p>Môn: Vật Lí</p>
-  <a href="#" onclick="buyExam('li7'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('LI7'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
   <h4>SỞ GD & ĐT NINH BÌNH</h4>
   <p>Môn: Vật Lí</p>
-  <a href="#" onclick="buyExam('li8'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('LI8'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="li">
   <h4>SỞ GD & ĐT NGHỆ AN</h4>
   <p>Môn: Vật Lí</p>
-  <a href="#" onclick="buyExam('li9'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('LI9'); return false;">Tải đề</a>
 </div>
 
 <!--Mon Anh-->
@@ -1121,55 +1169,55 @@ nav a{
 <div class="exam" data-mon="anh">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Tiếng Anh</p>
-  <a href="#" onclick="buyExam('anh1'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('ANH1'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="anh">
   <h4>SỞ GD&ĐT BẮC NINH</h4>
   <p>Môn: Tiếng Anh</p>
-  <a href="#" onclick="buyExam('anh2'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('ANH2'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="anh">
   <h4>SỞ GIÁO DỤC VÀ ĐÀO TẠO HÀ NỘI</h4>
   <p>Môn: Tiếng Anh</p>
-  <a href="#" onclick="buyExam('anh3'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('ANH3'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="anh">
   <h4>SỞ GD&ĐT HƯNG YÊN</h4>
   <p>Môn: Tiếng Anh</p>
-  <a href="#" onclick="buyExam('anh4'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('ANH4'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="anh">
   <h4>SỞ GD&ĐT NINH BÌNH</h4>
   <p>Môn: Tiếng Anh</p>
-  <a href="#" onclick="buyExam('anh5'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('ANH5'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="anh">
   <h4>SỞ GD&ĐT PHÚ THỌ</h4>
   <p>Môn: Tiếng Anh</p>
-  <a href="#" onclick="buyExam('anh6'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('ANH6'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="anh">
   <h4>TRƯỜNG THPT CHUYÊN BẮC GIANG</h4>
   <p>Môn: Tiếng Anh</p>
-  <a href="#" onclick="buyExam('anh7'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('ANH7'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="anh">
   <h4>TRƯỜNG THPT CHUYÊN BẮC NINH</h4>
   <p>Môn: Tiếng Anh</p>
-  <a href="#" onclick="buyExam('anh8'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('ANH8'); return false;">Tải đề</a>
 </div>
 
 <div class="exam" data-mon="anh">
   <h4>SỞ GD&ĐT THANH HÓA</h4>
   <p>Môn: Tiếng Anh</p>
-  <a href="#" onclick="buyExam('anh9'); return false;">Tải đề</a>
+  <a href="#" onclick="buyExam('ANH9'); return false;">Tải đề</a>
 </div>
 </div>
 
@@ -1413,6 +1461,18 @@ document.querySelectorAll(".exam").forEach(exam => {
     `;
 });
 
+// ===== TAG NEW =====
+document.querySelectorAll(".exam").forEach(exam => {
+
+  if(exam.dataset.new === "true"){
+
+    exam.innerHTML =
+      `<span class="new-tag">NEW</span>`
+      + exam.innerHTML;
+  }
+
+});
+
 //===== NÚT XEM THÊM ĐỀ CÁC SỞ =====//
 const exams = document.querySelectorAll(
   ".exam-list:not(.truefalse-list) .exam"
@@ -1436,7 +1496,7 @@ function updateExamVisibility(){
     }
 }
 
-// ===== RANDOM ĐỀ KHI LOAD TRANG =====
+// ===== RANDOM + ƯU TIÊN NEW =====
 function shuffleElements(containerSelector){
 
     const container = document.querySelector(containerSelector);
@@ -1445,32 +1505,44 @@ function shuffleElements(containerSelector){
         container.querySelectorAll(".exam")
     );
 
-    // Fisher-Yates shuffle
-    for(let i = items.length - 1; i > 0; i--){
+    // tách NEW và thường
+    const newItems = items.filter(
+        item => item.dataset.new === "true"
+    );
 
-        const j = Math.floor(Math.random() * (i + 1));
+    const normalItems = items.filter(
+        item => item.dataset.new !== "true"
+    );
 
-        [items[i], items[j]] = [items[j], items[i]];
+    // hàm random
+    function shuffle(arr){
+
+        for(let i = arr.length - 1; i > 0; i--){
+
+            const j = Math.floor(
+                Math.random() * (i + 1)
+            );
+
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+
+        return arr;
     }
 
-    items.forEach(item => {
+    // random từng nhóm
+    shuffle(newItems);
+    shuffle(normalItems);
+
+    // NEW luôn lên đầu
+    const finalItems = [
+        ...newItems,
+        ...normalItems
+    ];
+
+    finalItems.forEach(item => {
         container.appendChild(item);
     });
 }
-
-// random đề thường
-shuffleElements(".exam-list:not(.truefalse-list)");
-
-// random đề đúng/sai
-shuffleElements(".truefalse-list");
-
-updateExamVisibility();
-
-loadMoreBtn.addEventListener("click", function(){
-    visibleCount += 8;
-    updateExamVisibility();
-});
-
 
 //===== NÚT XEM THÊM ĐỀ ĐÚNG SAI =====//
 const trueFalseExams = document.querySelectorAll(
@@ -1525,74 +1597,74 @@ fakeVisitCounter();
 // ===== BÁN ĐỀ =====
 
 const links = {
-  toan1: "https://drive.google.com/file/d/1aNzGj0LhF_b3tB8FQJLkdo-_ohYkp_yC/view?usp=sharing",
-  toan2: "",
-  toan3: "https://drive.google.com/file/d/13e-bxjCa6IIQOeNbxFxJ0WmwHb2ujWwf/view?usp=sharing",
-  toan4: "https://drive.google.com/file/d/1rkIJSpSUGmr1gytS7ThziwmbcMhNBfL6/view?usp=sharing",
-  toan5: "https://drive.google.com/file/d/1w7TK_K8Y6ELj2fR0cl5lNNB9hWenFKQL/view?usp=drive_link",
-  toan6: "https://drive.google.com/file/d/1F6mekZaE1chzVa_MjHtjpmRE1iDMl18B/view?usp=sharing",
-  toan7: "https://drive.google.com/file/d/1K2fkdFS34-DyRLfqrXvsQEACRlF1waD3/view?usp=sharing",
-  toan8: "https://drive.google.com/file/d/1yeYIrswd0I9TGB17KK6grWFol_8S-r1i/view?usp=sharing",
-  toan9: "https://drive.google.com/file/d/14KkS2klEjlfBlQVpSJFDr4khhiCHnO92/view?usp=sharing",
-  toan10: "https://drive.google.com/file/d/1ni3oEwkTBqJoZC8lD3Y9RiQRENWbbJUY/view?usp=sharing",
-  toan11: "https://drive.google.com/file/d/1Oi02_vR224SawmmgrkiXGLz-HXwoyn_-/view",
-  toan12: "https://drive.google.com/file/d/1Vu-wFQxSDY2drDaZ27hBcS2lGim0zDli/view",
-  toan13: "https://drive.google.com/file/d/1kW7EcXLu4vA1zZtDYmUzK3nGgb9wB-5J/view",
-  toan14: "https://docs.google.com/document/d/1QHho4v3MXEos4o5Z-cDLB4PHMPJonEpk/edit",
-  toan15: "https://docs.google.com/document/d/1OrJl4d5vLpHn24cJNuS_846DTgY1tGxV/edit",
-  toan16: "https://docs.google.com/document/d/16mHiMxGVpwv0ZU_q01XPK1R6nqGRj56d/edit",
-  toan17: "https://drive.google.com/file/d/19f7N6aOxZ17L_jrTEeihJFMd4E12Of7n/view",
-  su1: "https://drive.google.com/file/d/1pz_CUabBYw--nq80QSgqrvfRccF6Nfei/view",
-  su2: "https://drive.google.com/file/d/1GWdv2TAXzqWUu3ZdcBU8k4zHETE7aCSj/view",
-  su3: "https://drive.google.com/file/d/1q4RtJus72BX_o0fk-kqBXNrRFfZUgTKj/view",
-  su4: "https://drive.google.com/file/d/1lklYQ48n2vrjHXOvmTPBzZgqBhGlee_o/view",
-  su5: "https://drive.google.com/file/d/1rSM4nt8nuBz3xQtPDkR-PiqvkGWL7StU/view",
-  su6: "https://drive.google.com/file/d/1Tjr9MzKFAlMLXbemGw0oGSIpq9zgKbKh/view",
-  su7: "https://drive.google.com/file/d/1oWpSVNQ4b_NL6adotVpPFGKA_xpiYCVZ/view",
-  su8: "https://drive.google.com/file/d/1Jp75yQN0uuWSZtP4ycTIRPqJEUZrpp3G/view",
-  su9: "https://drive.google.com/file/d/1r2bmG56RMwwQabYThjtMTocSWoLUQZlh/view",
-  su10: "https://drive.google.com/file/d/13DwvH5ay7RiH7po1wYjvApsaW2Iua6Q9/view",
-  su11: "https://drive.google.com/file/d/12ot1CAeoB3y98dSv3AGLwlM7P-9tJNa8/view",
-  su12: "https://drive.google.com/file/d/10lLlpziugm46QpeHyGqmh7iorjSuOgFf/view",
-  su13: "https://drive.google.com/file/d/1ppOWlLjUY4FUEJ2kGIUGQEErClpMdKdA/view",
-  su14: "https://drive.google.com/file/d/1qL6jkaE7LbD4PwlfdQ6-02s2RcnaSzqa/view",
-  dia1: "https://drive.google.com/file/d/1pz_CUabBYw--nq80QSgqrvfRccF6Nfei/view",
-  dia2: "https://drive.google.com/file/d/1ukI1TxFISdV4fTgP0mr8knrYYnPySMm1/view",
-  dia3: "https://drive.google.com/file/d/1GWdv2TAXzqWUu3ZdcBU8k4zHETE7aCSj/view",
-  dia4: "https://drive.google.com/file/d/1niPg0rj3eOZ9JianSs0YTIVI4QN516fm/view",
-  dia5: "https://drive.google.com/file/d/1q4RtJus72BX_o0fk-kqBXNrRFfZUgTKj/view",
-  dia6: "https://drive.google.com/file/d/1VYmbOvuy0O3y4g1BrBbzsbbvTLjwGInN/view",
-  dia7: "https://drive.google.com/file/d/1hyAf5sJrYFl5ikzGshOk0ZF0tl2kSEl3/view",
-  dia8: "https://drive.google.com/file/d/1lklYQ48n2vrjHXOvmTPBzZgqBhGlee_o/view",
-  dia9: "https://drive.google.com/file/d/1rSM4nt8nuBz3xQtPDkR-PiqvkGWL7StU/view",
-  dia10: "https://drive.google.com/file/d/1rSM4nt8nuBz3xQtPDkR-PiqvkGWL7StU/view",
-  dia11: "https://drive.google.com/file/d/12QIPDyHId-Jm0r-na058kFZGDNruXzjt/view",
-  dia12: "https://drive.google.com/file/d/1lNKQ7rBF3icaCwYX-emZ7eMJRX-MJM47/view",
-  van1: "https://docs.google.com/document/d/1Umys_B3rDI3NOzaYMfdHdb4DOmCujM7R/edit",
-  van2: "https://docs.google.com/document/d/1wiOFG9nciPdf14fO2i6QIRic-zKhkiFq/edit",
-  van3: "https://docs.google.com/document/d/1r0rGndllabCkmtSS8tpTv9QxaICpHP3z/edit",
-  van4: "https://docs.google.com/document/d/1QrU-FIeR-Xe3V8j0R1zFnB3VAfagcImU/edit",
-  van5: "https://docs.google.com/document/d/1uz0ox5uV2uRPVf_k2LkqCxcPlsbCgB68/edit",
-  van6: "https://docs.google.com/document/d/1Q51NSL7kv3vqRx_o-eBNhbaYBN2vQSZ9/edit",
-  van7: "https://docs.google.com/document/d/1JrpNA-CV-KICUVRkGW4aLAa0y3FPaPmk/edit",
-  li1: "https://drive.google.com/file/d/1JeKnBouimZGxVe-YZAEN1_SRYr7eXwe3/view",
-  li2: "https://drive.google.com/file/d/1RlMt9FsNxwt3Ao7l-k1LqSLMnuwO_l7d/view",
-  li3: "https://drive.google.com/file/d/1qiKVFFSe7v4sqv6O-bGPHIMwqpyhp3Dh/view",
-  li4: "https://drive.google.com/file/d/1_Rig5pn_7J6oClp_v5QCnqiKxyNDDDYL/view",
-  li5: "https://drive.google.com/file/d/1uvK45MLdfeNrTvc8vg_IO6AJy9J8Fgkz/view",
-  li6: "https://drive.google.com/file/d/113KBgKf8hC1nkOw3QB1MWW4w3EnTMhO0/view",
-  li7: "https://drive.google.com/file/d/1ua7KSjEwYGJuoK-_Ayu2bc1UjUHgB420/view",
-  li8: "https://drive.google.com/file/d/1jN2zmxOmdIVCTVIAu3a5JUIQba_Q-rno/view",
-  li9: "https://drive.google.com/file/d/1z3IOsRyvS0zdT8ZJj-eC-Av8jUgDhw5a/view",
-  anh1: "https://docs.google.com/document/d/19cVcU9Io1pZEaMuR1v4MgslY_ZkTGv6B/edit",
-  anh2: "https://docs.google.com/document/d/1A5ay0_uorMli1K_M-HPL5n_KhBLpKWRx/edit",
-  anh3: "https://docs.google.com/document/d/10DzkoshvCMaH1vIVpJ9yJdd8YWOK3G2g/edit",
-  anh4: "https://docs.google.com/document/d/1GnbItapE51OW8MZFXRmWaK20gkJ9IJYM/edit",
-  anh5: "https://docs.google.com/document/d/1z9dI4ED77YLENdZxkUyCD-zKEfSiD2nN/edit",
-  anh6: "https://docs.google.com/document/d/1EWJS5thi0cffLj4pRFVmsJxpxYIfzuf8/edit",
-  anh7: "https://docs.google.com/document/d/1_o5Go-BXTntuGlD_RYuH4uvmE2rZv6Hs/edit",
-  anh8: "https://docs.google.com/document/d/17SsuQ4ZhBGDn3d_CuVQZ1L1MUQF94bpx/edit",
-  anh9: "https://docs.google.com/document/d/1Rsn5jxTZ4X0jWpEG96LkOqta9AiKoTc8/edit"
+  TOAN1: "https://drive.google.com/file/d/1aNzGj0LhF_b3tB8FQJLkdo-_ohYkp_yC/view?usp=sharing",
+  TOAN2: "#",
+  TOAN3: "https://drive.google.com/file/d/13e-bxjCa6IIQOeNbxFxJ0WmwHb2ujWwf/view?usp=sharing",
+  TOAN4: "https://drive.google.com/file/d/1rkIJSpSUGmr1gytS7ThziwmbcMhNBfL6/view?usp=sharing",
+  TOAN5: "https://drive.google.com/file/d/1w7TK_K8Y6ELj2fR0cl5lNNB9hWenFKQL/view?usp=drive_link",
+  TOAN6: "https://drive.google.com/file/d/1F6mekZaE1chzVa_MjHtjpmRE1iDMl18B/view?usp=sharing",
+  TOAN7: "https://drive.google.com/file/d/1K2fkdFS34-DyRLfqrXvsQEACRlF1waD3/view?usp=sharing",
+  TOAN8: "https://drive.google.com/file/d/1yeYIrswd0I9TGB17KK6grWFol_8S-r1i/view?usp=sharing",
+  TOAN9: "https://drive.google.com/file/d/14KkS2klEjlfBlQVpSJFDr4khhiCHnO92/view?usp=sharing",
+  TOAN10: "https://drive.google.com/file/d/1ni3oEwkTBqJoZC8lD3Y9RiQRENWbbJUY/view?usp=sharing",
+  TOAN11: "https://drive.google.com/file/d/1Oi02_vR224SawmmgrkiXGLz-HXwoyn_-/view",
+  TOAN12: "https://drive.google.com/file/d/1Vu-wFQxSDY2drDaZ27hBcS2lGim0zDli/view",
+  TOAN13: "https://drive.google.com/file/d/1kW7EcXLu4vA1zZtDYmUzK3nGgb9wB-5J/view",
+  TOAN14: "https://docs.google.com/document/d/1QHho4v3MXEos4o5Z-cDLB4PHMPJonEpk/edit",
+  TOAN15: "https://docs.google.com/document/d/1OrJl4d5vLpHn24cJNuS_846DTgY1tGxV/edit",
+  TOAN16: "https://docs.google.com/document/d/16mHiMxGVpwv0ZU_q01XPK1R6nqGRj56d/edit",
+  TOAN17: "https://drive.google.com/file/d/19f7N6aOxZ17L_jrTEeihJFMd4E12Of7n/view",
+  SU1: "https://drive.google.com/file/d/1pz_CUabBYw--nq80QSgqrvfRccF6Nfei/view",
+  SU2: "https://drive.google.com/file/d/1GWdv2TAXzqWUu3ZdcBU8k4zHETE7aCSj/view",
+  SU3: "https://drive.google.com/file/d/1q4RtJus72BX_o0fk-kqBXNrRFfZUgTKj/view",
+  SU4: "https://drive.google.com/file/d/1lklYQ48n2vrjHXOvmTPBzZgqBhGlee_o/view",
+  SU5: "https://drive.google.com/file/d/1rSM4nt8nuBz3xQtPDkR-PiqvkGWL7StU/view",
+  SU6: "https://drive.google.com/file/d/1Tjr9MzKFAlMLXbemGw0oGSIpq9zgKbKh/view",
+  SU7: "https://drive.google.com/file/d/1oWpSVNQ4b_NL6adotVpPFGKA_xpiYCVZ/view",
+  SU8: "https://drive.google.com/file/d/1Jp75yQN0uuWSZtP4ycTIRPqJEUZrpp3G/view",
+  SU9: "https://drive.google.com/file/d/1r2bmG56RMwwQabYThjtMTocSWoLUQZlh/view",
+  SU10: "https://drive.google.com/file/d/13DwvH5ay7RiH7po1wYjvApsaW2Iua6Q9/view",
+  SU11: "https://drive.google.com/file/d/12ot1CAeoB3y98dSv3AGLwlM7P-9tJNa8/view",
+  SU12: "https://drive.google.com/file/d/10lLlpziugm46QpeHyGqmh7iorjSuOgFf/view",
+  SU13: "https://drive.google.com/file/d/1ppOWlLjUY4FUEJ2kGIUGQEErClpMdKdA/view",
+  SU14: "https://drive.google.com/file/d/1qL6jkaE7LbD4PwlfdQ6-02s2RcnaSzqa/view",
+  DIA1: "https://drive.google.com/file/d/1pz_CUabBYw--nq80QSgqrvfRccF6Nfei/view",
+  DIA2: "https://drive.google.com/file/d/1ukI1TxFISdV4fTgP0mr8knrYYnPySMm1/view",
+  DIA3: "https://drive.google.com/file/d/1GWdv2TAXzqWUu3ZdcBU8k4zHETE7aCSj/view",
+  DIA4: "https://drive.google.com/file/d/1niPg0rj3eOZ9JianSs0YTIVI4QN516fm/view",
+  DIA5: "https://drive.google.com/file/d/1q4RtJus72BX_o0fk-kqBXNrRFfZUgTKj/view",
+  DIA6: "https://drive.google.com/file/d/1VYmbOvuy0O3y4g1BrBbzsbbvTLjwGInN/view",
+  DIA7: "https://drive.google.com/file/d/1hyAf5sJrYFl5ikzGshOk0ZF0tl2kSEl3/view",
+  DIA8: "https://drive.google.com/file/d/1lklYQ48n2vrjHXOvmTPBzZgqBhGlee_o/view",
+  DIA9: "https://drive.google.com/file/d/1rSM4nt8nuBz3xQtPDkR-PiqvkGWL7StU/view",
+  DIA10: "https://drive.google.com/file/d/1rSM4nt8nuBz3xQtPDkR-PiqvkGWL7StU/view",
+  DIA11: "https://drive.google.com/file/d/12QIPDyHId-Jm0r-na058kFZGDNruXzjt/view",
+  DIA12: "https://drive.google.com/file/d/1lNKQ7rBF3icaCwYX-emZ7eMJRX-MJM47/view",
+  VAN1: "https://docs.google.com/document/d/1Umys_B3rDI3NOzaYMfdHdb4DOmCujM7R/edit",
+  VAN2: "https://docs.google.com/document/d/1wiOFG9nciPdf14fO2i6QIRic-zKhkiFq/edit",
+  VAN3: "https://docs.google.com/document/d/1r0rGndllabCkmtSS8tpTv9QxaICpHP3z/edit",
+  VAN4: "https://docs.google.com/document/d/1QrU-FIeR-Xe3V8j0R1zFnB3VAfagcImU/edit",
+  VAN5: "https://docs.google.com/document/d/1uz0ox5uV2uRPVf_k2LkqCxcPlsbCgB68/edit",
+  VAN6: "https://docs.google.com/document/d/1Q51NSL7kv3vqRx_o-eBNhbaYBN2vQSZ9/edit",
+  VAN7: "https://docs.google.com/document/d/1JrpNA-CV-KICUVRkGW4aLAa0y3FPaPmk/edit",
+  LI1: "https://drive.google.com/file/d/1JeKnBouimZGxVe-YZAEN1_SRYr7eXwe3/view",
+  LI2: "https://drive.google.com/file/d/1RlMt9FsNxwt3Ao7l-k1LqSLMnuwO_l7d/view",
+  LI3: "https://drive.google.com/file/d/1qiKVFFSe7v4sqv6O-bGPHIMwqpyhp3Dh/view",
+  LI4: "https://drive.google.com/file/d/1_Rig5pn_7J6oClp_v5QCnqiKxyNDDDYL/view",
+  LI5: "https://drive.google.com/file/d/1uvK45MLdfeNrTvc8vg_IO6AJy9J8Fgkz/view",
+  LI6: "https://drive.google.com/file/d/113KBgKf8hC1nkOw3QB1MWW4w3EnTMhO0/view",
+  LI7: "https://drive.google.com/file/d/1ua7KSjEwYGJuoK-_Ayu2bc1UjUHgB420/view",
+  LI8: "https://drive.google.com/file/d/1jN2zmxOmdIVCTVIAu3a5JUIQba_Q-rno/view",
+  LI9: "https://drive.google.com/file/d/1z3IOsRyvS0zdT8ZJj-eC-Av8jUgDhw5a/view",
+  ANH1: "https://docs.google.com/document/d/19cVcU9Io1pZEaMuR1v4MgslY_ZkTGv6B/edit",
+  ANH2: "https://docs.google.com/document/d/1A5ay0_uorMli1K_M-HPL5n_KhBLpKWRx/edit",
+  ANH3: "https://docs.google.com/document/d/10DzkoshvCMaH1vIVpJ9yJdd8YWOK3G2g/edit",
+  ANH4: "https://docs.google.com/document/d/1GnbItapE51OW8MZFXRmWaK20gkJ9IJYM/edit",
+  ANH5: "https://docs.google.com/document/d/1z9dI4ED77YLENdZxkUyCD-zKEfSiD2nN/edit",
+  ANH6: "https://docs.google.com/document/d/1EWJS5thi0cffLj4pRFVmsJxpxYIfzuf8/edit",
+  ANH7: "https://docs.google.com/document/d/1_o5Go-BXTntuGlD_RYuH4uvmE2rZv6Hs/edit",
+  ANH8: "https://docs.google.com/document/d/17SsuQ4ZhBGDn3d_CuVQZ1L1MUQF94bpx/edit",
+  ANH9: "https://docs.google.com/document/d/1Rsn5jxTZ4X0jWpEG96LkOqta9AiKoTc8/edit"
 };
 
 const orders = {};
@@ -1681,13 +1753,40 @@ function checkPayment(){
 function closeBox(){
   document.getElementById("paymentBox").style.display = "none";
 }
-// tự tắt sau x giây
-setTimeout(() => {
-  const popup = document.getElementById("welcomePopup");
-  if(popup){
-    popup.style.display = "none";
-  }
-}, 100000);
+// ===== POPUP SAU 4 TIẾNG HIỆN LẠI =====
+
+const popup = document.getElementById("welcomePopup");
+
+// thời gian hiện lại (4 tiếng)
+const popupDelay = 4 * 60 * 60 * 1000;
+
+const lastPopupTime = localStorage.getItem("popupTime");
+
+if(
+  !lastPopupTime || 
+  Date.now() - lastPopupTime > popupDelay
+){
+
+  // hiện popup
+  popup.style.display = "flex";
+
+  // lưu thời gian hiện
+  localStorage.setItem(
+    "popupTime",
+    Date.now()
+  );
+
+}else{
+
+  // ẩn popup
+  popup.style.display = "none";
+}
+
+
+// nút đóng popup
+function closeWelcomePopup(){
+  popup.style.display = "none";
+}
 
 // bấm nút tắt ngay
 function closeWelcomePopup(){
