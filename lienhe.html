@@ -246,6 +246,83 @@ h2{
   text-decoration:none;
   font-weight:bold;
 }
+.contact-box{
+    max-width:800px;
+    width:95%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-box h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#2c7be5;
+}
+
+.contact-box form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #dcdcdc;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+}
+
+.contact-box button{
+    background:#2c7be5;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#successBox{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#e8fff1;
+    color:#00a651;
+    border-radius:12px;
+    text-align:center;
+    font-weight:bold;
+}
+.contact-box input[type="file"]{
+    border:2px dashed #2c7be5;
+    padding:14px;
+    border-radius:14px;
+    background:#f7fbff;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.contact-box input[type="file"]::file-selector-button{
+
+    background:#2c7be5;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-right:12px;
+    transition:0.2s;
+}
+
+.contact-box input[type="file"]::file-selector-button:hover{
+    background:#1a5edb;
+}
 </style>
 </head>
 <body>
@@ -264,19 +341,44 @@ h2{
     <a href="lienhe.html">Liên hệ</a>
   </nav>
 </header>
-  <div class="container">
-    <h2>Liên hệ với chúng tôi</h2>
+  <section class="contact-box">
 
-    <div class="form-wrapper">
-  <iframe 
-    src="https://forms.gle/3ZXEWfjcUZthUkd38"
-    width="100%" 
-    height="700" 
-    frameborder="0">
-  </iframe>
+  <h2>Liên hệ với chúng tôi</h2>
+
+  <form id="contactForm">
+
+    <input
+      type="text"
+      id="name"
+      placeholder="Họ và tên"
+      required
+    >
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Email"
+      required
+    >
+
+    <textarea
+      id="message"
+      rows="6"
+      placeholder="Nội dung..."
+      required></textarea>
+    <input
+      type="file"
+      id="file"
+      accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+    <button type="submit">
+      Gửi liên hệ
+    </button>
+
+  </form>
+  <div id="successBox">
+  ✅ Gửi liên hệ thành công!
 </div>
-
-  </div>
+</section>
 <div class="visit-counter">
     Hôm nay có <span id="visitCount">0</span> lượt truy cập
 </div>
@@ -309,6 +411,141 @@ h2{
 </footer>
 
   <script>
+    let lastSend = 0;
+const TOKEN = "8843600628:AAHNLYXOyPID-IZ5mSSKuUnlL7m9V6qzKbY";
+const CHAT_ID = "6976560944";
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const email =
+    document.getElementById("email").value.trim();
+
+    const message =
+    document.getElementById("message").value.trim();
+
+    const file =
+    document.getElementById("file").files[0];
+    if(file && file.size > 5 * 1024 * 1024){
+
+   alert("File tối đa 5MB!");
+
+   return;
+}
+
+    let fileUrl = "";
+
+    const emailRegex =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailRegex.test(email)){
+
+      alert("Email không hợp lệ!");
+
+      return;
+    }
+    if(message.length > 1000){
+
+   alert("Nội dung quá dài!");
+
+   return;
+}   
+
+if(file){
+
+    const formData = new FormData();
+
+    formData.append("file", file);
+
+    formData.append(
+      "upload_preset",
+      "web_upload"
+    );
+
+    const cloudRes =
+      await fetch(
+    `https://api.cloudinary.com/v1_1/dzhvmge5w/auto/upload`,
+    {
+        method:"POST",
+        body: formData
+    });
+
+        const cloudData =
+          await cloudRes.json();
+
+
+        fileUrl =
+          cloudData.secure_url;
+    }
+
+    let text =
+    "📩 LIÊN HỆ MỚI\n\n" +
+    "👤 Tên: " + name + "\n\n" +
+    "📧 Email: " + email + "\n\n" +
+    "💬 Nội dung:\n" + message;
+
+    if(fileUrl){
+
+        text += "\n\n📎 File:\n" + fileUrl;
+    }
+
+        const url =
+    `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+try{
+
+    const now = Date.now();
+
+    if(now - lastSend < 30000){
+
+        alert("Vui lòng chờ 30 giây!");
+
+        return;
+    }
+
+    await fetch(url,{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            chat_id: CHAT_ID,
+            text: text
+        })
+    });
+
+    // chỉ cooldown khi gửi thành công
+    lastSend = now;
+
+    document
+    .getElementById("successBox")
+    .style.display = "block";
+
+    setTimeout(()=>{
+
+        document
+        .getElementById("successBox")
+        .style.display = "none";
+
+    },3000);
+
+    document
+    .getElementById("contactForm")
+    .reset();
+
+}catch(err){
+
+    alert("Có lỗi xảy ra!");
+
+}
+});
+
     function send() {
       alert("Gửi thành công! (demo thôi 😄)");
     }
