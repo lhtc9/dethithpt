@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hướng dẫn tải đề</title>
+  <link rel="icon" href="https://i.pinimg.com/736x/6c/a1/00/6ca100ef6794d7638a81ccf1124a65ba.jpg">
+
+<style>
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:linear-gradient(180deg,#eef5ff,#f8fbff,#ffffff);
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+/* ===== HEADER (GIỐNG 100% TRANG CHÍNH) ===== */
+header{
+  background:#2c7be5;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position: relative; /* 🔥 cần để menu bung xuống */
+  height:70px;           /* 🔥 QUAN TRỌNG */
+  padding:0 30px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+header h1{
+  font-size:26px;
+  line-height:1;
+}
+
+/* ===== NAV ===== */
+nav{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  line-height:1;
+}
+
+/* ===== DROPDOWN ===== */
+
+.dropdown a{
+  display:block;
+  padding:10px;
+  color:black;
+}
+
+.dropdown a:hover{
+  background:#e9f2ff;
+}
+
+.menu:hover .dropdown{
+  display:block;
+}
+
+/* ===== FORM ===== */
+.container {
+  max-width:900px;
+  width:90%;
+  margin:50px auto;
+  padding:0;
+  background:none;
+  box-shadow:none;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:30px;
+  font-weight:700;
+  color:#1e3a8a;
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #2c7be5; /* cùng màu header */
+  color: white;
+  padding-top: 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-col h2,
+.footer-col h3 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 14px;
+  color: #e0e7ff; /* xanh nhạt */
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  background: #1a5edb; /* xanh đậm hơn chút */
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #fff;
+  padding-left: 5px;
+  transition: 0.2s;
+}
+    
+
+.upload-btn:hover{
+  background:#1a5edb;
+}
+
+/* ===== MOBILE ===== */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+    color:white;
+    display: block !important; /* 🔥 ép hiện */
+    
+  }
+
+  @media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+    color:white;
+    display: block !important; /* 🔥 ép hiện */
+    /* ===== NEWS MOBILE ===== */
+
+.container{
+  width:94%;
+  margin:25px auto;
+}
+
+.card{
+  padding:18px;
+  border-radius:18px;
+}
+
+ .news-img{
+    border-radius:14px;
+  }
+
+.news-img{
+  height:190px;
+  border-radius:14px;
+}
+
+.card h3{
+  font-size:22px;
+  line-height:1.5;
+}
+
+.news-text{
+  font-size:15px;
+  line-height:1.7;
+}
+
+.news-meta{
+  gap:10px;
+  font-size:13px;
+}
+
+.news-date{
+  width:100%;
+  margin-left:0;
+}
+
+.read-btn{
+  width:100%;
+  text-align:center;
+  padding:14px;
+}
+  }
+
+  nav{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#2c7be5;
+    position:absolute;
+    top:70px; /* 🔥 đồng bộ với header */
+    left:0;
+    padding:10px 0;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  nav a{
+    padding:10px;
+    text-align:center;
+  }
+
+  .dropdown{
+    position:static;
+    box-shadow:none;
+  }
+
+  .menu:hover .dropdown{
+    display:none;
+  }
+
+  .menu.active .dropdown{
+    display:block;
+  }
+}
+  nav{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#2c7be5;
+    position:absolute;
+    top:70px; /* 🔥 đồng bộ với header */
+    left:0;
+    padding:10px 0;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  nav a{
+    padding:10px;
+    text-align:center;
+  }
+
+  .dropdown{
+    position:static;
+    box-shadow:none;
+  }
+
+  .menu:hover .dropdown{
+    display:none;
+  }
+
+  .menu.active .dropdown{
+    display:block;
+  }
+}
+  .visit-counter{
+    width: fit-content;
+    margin: 30px auto 20px auto;
+    padding: 12px 25px;
+    background: white;
+    color: #2c7be5;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid #dce8ff;
+}
+.card{
+    background:white;
+    padding:30px;
+    border-radius:24px;
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(44,123,229,0.08);
+    border:1px solid #edf2ff;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(44,123,229,0.15);
+}
+
+  header h1 a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+a{
+  color:#ff4d4f;
+  text-decoration:none;
+  font-weight:bold;
+}
+  /* ===== NEWS ===== */
+
+.news-img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:20px;
+}
+
+.news-text{
+  color:#555;
+  line-height:1.8;
+  margin:15px 0;
+}
+
+.news-meta{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:18px;
+
+  margin-top:18px;
+  margin-bottom:20px;
+
+  font-size:14px;
+  color:#666;
+
+  border-top:1px solid #edf2ff;
+  padding-top:15px;
+}
+
+.news-source{
+  color:#a35b00;
+  font-weight:bold;
+}
+
+.news-date{
+  margin-left:auto;
+}
+
+.read-btn{
+  display:inline-block;
+  padding:12px 22px;
+  background:#2c7be5;
+  color:white;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.read-btn:hover{
+  background:#1a5edb;
+  transform:translateY(-2px);
+}
+.card h3{
+  color:#1e3a8a;
+  line-height:1.5;
+  margin-bottom:12px;
+}
+
+.card{
+  transition:0.3s;
+}
+</style>
+</head>
+<body>
+
+  <header>
+  <h1><a href="index.html">Đề Ôn Thi Tốt Nghiệp THPT 2026</a></h1>
+
+  <!-- Nút 3 gạch -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav">
+    <a href="index.html">Trang chủ</a>
+    <a href="hd1.html">Hướng dẫn</a>
+    <a href="#">Tài liệu</a>
+    <a href="#">Tin tức</a>
+    <a href="lienhe.html">Liên hệ</a>
+  </nav>
+</header>
+
+  <div class="container">
+
+  <h2>📰 Tin tức mới nhất</h2>
+
+  <div class="card">
+
+    <img src="anh/tt3.png" class="news-img">
+
+    <h3>
+      Bộ GD-ĐT công bố lịch thi tốt nghiệp THPT năm 2026
+    </h3>
+
+    <p class="news-text">
+      Lịch thi tốt nghiệp THPT năm 2026 diễn ra từ ngày 10-12/6, 
+      trong đó ngày 11 và ngày 12/6 thí sinh chính thức làm bài thi.
+    </p>
+
+        <div class="news-meta">
+
+        <span class="news-source">
+            👤 Chinhphu.vn
+        </span>
+
+        <span class="news-date">
+            🕒 07:35 | 26/05/2026
+        </span>
+
+        </div>
+
+   <a 
+  href="https://xaydungchinhsach.chinhphu.vn/lich-thi-tot-nghiep-thpt-nam-2026-119260319121525172.htm"
+  target="_blank"
+  class="read-btn">
+  Đọc tiếp →
+  </a>
+
+  </div>
+
+
+  <div class="card">
+
+    <img src="anh/tt4.webp" class="news-img">
+
+    <h3>
+      Thisinh thitotnghiepthpt edu vn 2026 đăng nhập hệ thống như thế nào?
+    </h3>
+
+    <p class="news-text">
+      Thisinh thitotnghiepthpt edu vn 2026 đăng nhập hệ thống như thế nào?
+    </p>
+    <div class="news-meta">
+
+        <span class="news-source">
+            👤 Lê Nguyễn Minh Khanh
+        </span>
+
+        <span class="news-date">
+            🕒 07:41 | 25/05/2026
+        </span>
+
+        </div>
+
+   <a 
+  href="https://thuvienphapluat.vn/hoi-dap-phap-luat/thisinh-thitotnghiepthpt-edu-vn-2026-dang-nhap-he-thong-nhu-the-nao-138080729.html"
+  target="_blank"
+  class="read-btn">
+  Đọc tiếp →
+  </a>
+
+  </div>
+
+
+  <div class="card">
+
+    <img src="anh/tt1.jpg" class="news-img">
+
+    <h3>
+      Bộ GD-ĐT công bố những điểm mới về thi tốt nghiệp THPT năm 2026
+    </h3>
+
+    <p class="news-text">
+      Điều chỉnh mới của Bộ GD-ĐT là tích hợp giấy báo dự thi và thẻ dự thi tốt nghiệp THPT thành một loại duy nhất 
+      là “Giấy báo dự thi” do trường phổ thông nơi thí sinh nộp hồ sơ đăng ký dự thi cấp.
+    </p>
+
+        <div class="news-meta">
+
+        <span class="news-source">
+            👤 Thanh Hùng
+        </span>
+
+        <span class="news-date">
+            🕒 18:35 | 11/03/2026
+        </span>
+
+        </div>
+
+
+   <a 
+  href="https://vietnamnet.vn/bo-gd-dt-cong-bo-nhung-diem-moi-ve-thi-tot-nghiep-thpt-nam-2026-2496544.html"
+  target="_blank"
+  class="read-btn">
+  Đọc tiếp →
+  </a>
+
+  </div>
+
+  <div class="card">
+
+    <img src="anh/tt2.jpg" class="news-img">
+
+    <h3>
+      Phổ điểm thi đánh giá tư duy của cả năm 2026, cao nhất 98.98 điểm
+    </h3>
+
+    <p class="news-text">
+      Hôm nay (26/5), Đại học Bách khoa Hà Nội công bố điểm thi đánh giá tư duy đợt 3 - đợt cuối cùng trong năm, 
+      đồng thời công bố phổ điểm của cả năm 2026.
+    </p>
+
+            <div class="news-meta">
+
+        <span class="news-source">
+            👤 Thúy Nga
+        </span>
+
+        <span class="news-date">
+            🕒 07:34 | 26/05/2026
+        </span>
+
+        </div>
+
+
+    <a href="https://vietnamnet.vn/pho-diem-thi-danh-gia-tu-duy-cua-ca-nam-2026-cao-nhat-98-98-diem-2519315.html" target="_blank" class="read-btn">
+    Đọc tiếp →
+    </a>
+
+  </div>
+
+</div>
+<div class="visit-counter">
+    Hôm nay có <span id="visitCount">0</span> lượt truy cập
+</div>
+
+  <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>📘 Đề Thi THPT</h3>
+      <p>Website chia sẻ đề thi, tài liệu ôn tập miễn phí, cập nhật mỗi ngày.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Liên hệ</h3>
+      <p>Email: chaul18.tvu@gmail.com</p>
+      <p>Zalo: 03811493</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Kết nối</h3>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
+      <a href="#">YouTube</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Đề Thi Tốt Nghiệp THPT - © All rights reserved.</p>
+  </div>
+</footer>
+
+  <script>
+
+function toggleMenu() {
+  document.getElementById("nav").classList.toggle("active");
+}
+
+      /* 🔥 ĐÓNG MENU KHI BẤM RA NGOÀI */
+document.addEventListener("click", function(e) {
+  const nav = document.getElementById("nav");
+  const toggle = document.querySelector(".menu-toggle");
+
+  if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+    nav.classList.remove("active");
+  }
+});
+
+/* ĐÓNG MENU KHI CLICK NGOÀI */
+document.addEventListener("click", function(e) {
+  const nav = document.getElementById("nav");
+  const toggle = document.querySelector(".menu-toggle");
+
+  if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+    nav.classList.remove("active");
+  }
+});
+  const isDev = false; // true test, false publish
+
+if (!isDev) {
+  document.addEventListener("contextmenu", e => e.preventDefault());
+
+  document.onkeydown = function(e) {
+    if (e.key === "F12") return false;
+    if (e.ctrlKey && e.key.toLowerCase() === "u") return false;
+    if (e.ctrlKey && e.shiftKey && e.key === "I") return false;
+  };
+}
+    function fakeVisitCounter(){
+    let current = localStorage.getItem("fakeVisits");
+
+    if(!current){
+        current = 1287;
+    }else{
+        current = parseInt(current);
+    }
+
+    current += Math.floor(Math.random()*5)+1;
+
+    localStorage.setItem("fakeVisits", current);
+
+    document.getElementById("visitCount").innerText = current;
+}
+
+fakeVisitCounter();
+</script>
+</body>
+</html>
