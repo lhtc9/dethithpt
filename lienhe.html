@@ -29,6 +29,7 @@ body{
   display:flex;
   flex-direction:column;
   min-height:100vh;
+  padding-top:70px;
 }
 
 /* ===== HEADER (GIỐNG 100% TRANG CHÍNH) ===== */
@@ -38,8 +39,14 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  position: relative; /* 🔥 cần để menu bung xuống */
-  height:70px;           /* 🔥 QUAN TRỌNG */
+
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  backdrop-filter: blur(10px);
+  z-index:9999;
+  height:70px;
   padding:0 30px;
   box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
