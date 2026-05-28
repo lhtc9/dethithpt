@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLJ5M971VB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,6 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kho Đề Ôn Thi Tốt Nghiệp THPT</title>
 <link rel="icon" href="https://i.pinimg.com/736x/6c/a1/00/6ca100ef6794d7638a81ccf1124a65ba.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <style>
 /* ===== RESET ===== */
 *{
@@ -28,6 +29,7 @@ body{
   display:flex;
   flex-direction:column;
   min-height:100vh;
+  padding-top:70px;
 }
 
 /* ===== HEADER ===== */
@@ -37,7 +39,12 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  position:relative;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:9999;
+  backdrop-filter: blur(10px);
   height:70px;
   padding:0 30px;
   box-shadow:0 2px 8px rgba(0,0,0,0.15);
@@ -728,6 +735,25 @@ header h1 a{
   text-decoration:none;
   font-weight:bold;
 }
+.download-count{
+    position:absolute;
+    right:15px;
+    bottom:12px;
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    font-size:13px;
+    font-weight:500;
+
+    color:#777;
+}
+
+.download-count i{
+    font-size:14px;
+    color:#888;
+}
 </style>
 </head>
 
@@ -1336,48 +1362,6 @@ header h1 a{
   </a>
   </div>
 
-  <div class="exam dungsai-card" data-mon="dungsai">
-    <p>Môn: Sử</p>
-    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
-      Tải đề
-    </a>
-  </div>
-
-  <div class="exam dungsai-card" data-mon="dungsai">
-    <p>Môn: Địa</p>
-    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
-      Tải đề
-    </a>
-  </div>
-
-  <div class="exam dungsai-card" data-mon="dungsai">
-    <p>Môn: Địa</p>
-    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
-      Tải đề
-    </a>
-  </div>
-
-  <div class="exam dungsai-card" data-mon="dungsai">
-    <p>Môn: Lý</p>
-    <a href="#" onclick="comingSoonTrueFalse('ds1'); return false;">
-      Tải đề
-    </a>
-  </div>
-
-  <div class="exam dungsai-card" data-mon="dungsai">
-    <p>Môn: Lý</p>
-    <a href="#" onclick="comingSoonTrueFalse('ds2'); return false;">
-      Tải đề
-    </a>
-  </div>
-
-  <div class="exam dungsai-card" data-mon="dungsai">
-    <p>Môn: Hóa</p>
-    <a href="#" onclick="comingSoonTrueFalse('ds3'); return false;">
-      Tải đề
-    </a>
-  </div>
-
 </div>
 <div class="load-more-wrap">
     <button id="loadMoreTrueFalseBtn">
@@ -1553,18 +1537,40 @@ function comingSoonTrueFalse(){
 }
 //===icon đề==//
 document.querySelectorAll(".exam").forEach(exam => {
+
     const mon = exam.getAttribute("data-mon");
 
-    let icon = "📄"; // mặc định
+    let icon = "📄";
 
     if(mon === "dungsai"){
         icon = "📝";
     }
 
+    // random lượt tải
+    let randomDownload;
+
+const number = Math.floor(Math.random() * 1200) + 80;
+
+if(number >= 1000){
+
+    randomDownload =
+        (number / 1000).toFixed(1) + "k";
+
+}else{
+
+    randomDownload = number;
+}
+
     exam.innerHTML = `
         <div class="exam-icon">${icon}</div>
+
         <div class="exam-content">
             ${exam.innerHTML}
+        </div>
+
+        <div class="download-count">
+          <i class="bi bi-download"></i>
+         ${randomDownload} lượt tải
         </div>
     `;
 });
